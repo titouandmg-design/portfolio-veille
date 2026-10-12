@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "updated": "2026-10-08",
+  "themes": {
+    "aiops": {
+      "name": "AIOps",
+      "news": [
+        {
+          "date": "2026-09-23",
+          "title": {
+            "fr": "Une organisation sur deux utilise déjà des agents IA en production",
+            "en": "One in two organisations already runs AI agents in production"
+          },
+          "text": {
+            "fr": "Selon une étude Cisco menée par Omdia auprès de 1 000 responsables informatiques, 51 % font déjà agir des agents IA sur leur réseau en production, et 95 % jugent leurs outils AIOps classiques insuffisants. Une organisation reçoit en moyenne environ 4 100 alertes par jour, dont près de la moitié sont fermées sans être analysées.",
+            "en": "According to a Cisco study run by Omdia with 1,000 IT leaders, 51% already let AI agents act on their production network, and 95% find their traditional AIOps tools lacking. An organisation receives about 4,100 alerts a day on average, and nearly half are closed without investigation."
+          },
+          "source": "Cisco Newsroom",
+          "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html"
+        },
+        {
+          "date": "2026-07",
+          "title": {
+            "fr": "Zabbix 8.0 ouvre la supervision aux agents IA",
+            "en": "Zabbix 8.0 opens monitoring to AI agents"
+          },
+          "text": {
+            "fr": "La version 8.0 de Zabbix passe en bêta. Sa feuille de route prévoit un serveur MCP pour que des agents IA puissent interroger les données de supervision, ainsi que la prise en charge d'OpenTelemetry.",
+            "en": "Zabbix 8.0 enters beta. Its roadmap includes an MCP server so that AI agents can query monitoring data, along with OpenTelemetry support."
+          },
+          "source": "Everywan",
+          "url": "https://everywan.com/en/blog/zabbix-8-0-what-actually-changes"
+        },
+        {
+          "date": "2026-06",
+          "title": {
+            "fr": "Cisco Live : AgenticOps et une console unique",
+            "en": "Cisco Live: AgenticOps and a single console"
+          },
+          "text": {
+            "fr": "Cisco présente Cisco Cloud Control, qui regroupe réseau, sécurité et observabilité. Chaque recommandation de l'IA est accompagnée de son raisonnement, et les changements sont simulés sur un jumeau numérique avant d'atteindre la production.",
+            "en": "Cisco unveils Cisco Cloud Control, bringing networking, security and observability together. Every AI recommendation comes with its reasoning, and changes are simulated on a digital twin before reaching production."
+          },
+          "source": "BizTech Magazine",
+          "url": "https://biztechmagazine.com/article/2026/06/cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks"
+        }
+      ]
+    },
+    "nis2": {
+      "name": "NIS 2",
+      "news": [
+        {
+          "date": "2026-10-06",
+          "title": {
+            "fr": "Nouveau report à l'Assemblée nationale",
+            "en": "Another delay at the National Assembly"
+          },
+          "text": {
+            "fr": "L'examen du projet de loi Résilience, prévu les 7 et 9 octobre, est retiré de l'ordre du jour faute de place. Le rapporteur Éric Bothorel espère une réinscription « d'ici quinze jours ou trois semaines ».",
+            "en": "The debate on the Resilience bill, planned for 7 and 9 October, is pulled from the agenda for lack of time. Rapporteur Éric Bothorel hopes it will be rescheduled \"within two or three weeks\"."
+          },
+          "source": "Next",
+          "url": "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/"
+        },
+        {
+          "date": "2026-03-17",
+          "title": {
+            "fr": "L'ANSSI publie le Référentiel Cyber France (ReCyF)",
+            "en": "ANSSI publishes the French Cyber Framework (ReCyF)"
+          },
+          "text": {
+            "fr": "Ce document de travail décrit les mesures de sécurité qui seront attendues des entités concernées. L'ANSSI propose aussi un préenregistrement en ligne pour se préparer avant le vote de la loi.",
+            "en": "This working document describes the security measures that will be expected of covered entities. ANSSI also offers online pre-registration so organisations can prepare before the law is passed."
+          },
+          "source": "Legiscope",
+          "url": "https://www.legiscope.com/blog/transposition-nis2-france.html"
+        },
+        {
+          "date": "2024-10-17",
+          "title": {
+            "fr": "Près de deux ans de retard pour la France",
+            "en": "France is almost two years late"
+          },
+          "text": {
+            "fr": "L'Union européenne fixait la transposition au 17 octobre 2024. Le projet de loi a été adopté par le Sénat le 12 mars 2025 puis examiné en commission à l'Assemblée le 10 septembre 2025 ; il n'est toujours pas définitivement voté.",
+            "en": "The EU set the transposition deadline at 17 October 2024. The bill was passed by the Senate on 12 March 2025 and reviewed in committee at the Assembly on 10 September 2025; it has still not been finally adopted."
+          },
+          "source": "Haxoris",
+          "url": "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+          "label": {
+            "fr": "Depuis le 17 octobre 2024",
+            "en": "Since 17 October 2024"
+          }
+        }
+      ]
+    },
+    "sdwan": {
+      "name": "SD-WAN",
+      "news": [
+        {
+          "date": "2026-08",
+          "title": {
+            "fr": "Gartner publie son classement SASE 2026",
+            "en": "Gartner releases its 2026 SASE ranking"
+          },
+          "text": {
+            "fr": "Netskope, Cato Networks, Palo Alto Networks et Zscaler sont « Leaders » ; Fortinet et Cisco sont « Challengers » et SonicWall figure parmi les mentions honorables. Gartner estime que le marché du SASE dépassera 18 milliards de dollars en 2026.",
+            "en": "Netskope, Cato Networks, Palo Alto Networks and Zscaler are \"Leaders\"; Fortinet and Cisco are \"Challengers\" and SonicWall gets an honourable mention. Gartner expects the SASE market to exceed $18 billion in 2026."
+          },
+          "source": "SDxCentral",
+          "url": "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/"
+        },
+        {
+          "date": "2025-07-02",
+          "title": {
+            "fr": "HPE finalise le rachat de Juniper Networks",
+            "en": "HPE completes its acquisition of Juniper Networks"
+          },
+          "text": {
+            "fr": "Pour environ 14 milliards de dollars, HPE réunit son SD-WAN EdgeConnect et l'IA réseau Mist de Juniper. Un exemple de la consolidation du marché autour de quelques grands acteurs.",
+            "en": "For about $14 billion, HPE brings together its EdgeConnect SD-WAN and Juniper's Mist network AI, an example of the market consolidating around a few large players."
+          },
+          "source": "SiliconANGLE",
+          "url": "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/"
+        },
+        {
+          "date": "2026",
+          "title": {
+            "fr": "Le SD-WAN s'achète désormais en offre SASE",
+            "en": "SD-WAN is now bought as part of SASE"
+          },
+          "text": {
+            "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022. L'IA générative commence aussi à servir à la configuration initiale des réseaux.",
+            "en": "Gartner predicted that 60% of new SD-WAN purchases in 2026 would be part of a single-vendor SASE offer, up from 15% in 2022. Generative AI is also starting to be used for initial network configuration."
+          },
+          "source": "Fierce Network",
+          "url": "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape",
+          "label": {
+            "fr": "Tendance 2026",
+            "en": "2026 trend"
+          }
+        }
+      ]
+    }
+  }
+}
