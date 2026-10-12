@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-10-08",
+  "version": 2,
+  "updated": "2026-10-12",
   "themes": {
     "aiops": {
       "name": "AIOps",
@@ -43,6 +43,50 @@
           },
           "source": "BizTech Magazine",
           "url": "https://biztechmagazine.com/article/2026/06/cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks"
+        }
+      ],
+      "reports": [
+        {
+          "date": "2026-10-12",
+          "title": {
+            "fr": "L'IA passe de l'alerte à l'action dans la supervision réseau",
+            "en": "AI moves from alerting to acting in network monitoring"
+          },
+          "summary": {
+            "fr": "Ces derniers mois, l'AIOps a franchi un cap : les outils ne se contentent plus de détecter des anomalies, ils confient aussi à des agents IA le diagnostic et la correction des incidents. L'étude publiée par Cisco et Omdia le 23 septembre 2026, menée auprès de 1 000 responsables informatiques, montre que 51 % des organisations laissent déjà des agents IA agir sur leur réseau en production, et que 95 % jugent leurs outils AIOps classiques insuffisants.\n\nLes éditeurs suivent ce mouvement. En juin, Cisco a présenté Cisco Cloud Control, une console unique où chaque recommandation de l'IA est accompagnée de son raisonnement et où les changements sont d'abord testés sur un jumeau numérique. Côté logiciel libre, la feuille de route de Zabbix 8.0 prévoit un serveur MCP pour que des agents IA puissent interroger directement les données de supervision.",
+            "en": "In recent months AIOps has reached a turning point: tools no longer just detect anomalies, they also hand diagnosis and remediation over to AI agents. The study published by Cisco and Omdia on 23 September 2026, based on 1,000 IT leaders, shows that 51% of organisations already let AI agents act on their production network, and that 95% find their traditional AIOps tools lacking.\n\nVendors are following the trend. In June Cisco unveiled Cisco Cloud Control, a single console where every AI recommendation comes with its reasoning and changes are first tested on a digital twin. On the open-source side, the Zabbix 8.0 roadmap includes an MCP server so that AI agents can query monitoring data directly."
+          },
+          "analysis": [
+            {
+              "fr": "Le volume d'alertes n'est plus gérable à la main : environ 4 100 par jour en moyenne selon l'étude Cisco, dont près de la moitié sont fermées sans être analysées. L'IA répond d'abord à ce problème de surcharge.",
+              "en": "The volume of alerts can no longer be handled by hand: about 4,100 a day on average according to the Cisco study, and nearly half are closed without being investigated. AI is first and foremost an answer to this overload."
+            },
+            {
+              "fr": "La confiance reste la condition : 69 % des responsables exigent une explication détaillée des actions menées par l'IA. Journal du raisonnement, simulation avant déploiement et validation humaine deviennent des fonctions attendues.",
+              "en": "Trust remains the key condition: 69% of leaders require a detailed explanation of the actions taken by AI. Reasoning logs, simulation before deployment and human approval are becoming expected features."
+            },
+            {
+              "fr": "Les outils se regroupent : 86 % des responsables jugent qu'une plateforme unique est la meilleure voie, plutôt qu'une dizaine d'outils à corréler. Cette tendance favorise les grands éditeurs.",
+              "en": "Tools are consolidating: 86% of leaders believe a single integrated platform is the best path, rather than a dozen tools to correlate. This trend favours the large vendors."
+            },
+            {
+              "fr": "Les solutions libres comme Zabbix s'ouvrent à l'IA par des interfaces standard (MCP, OpenTelemetry) plutôt qu'en intégrant leur propre modèle.",
+              "en": "Open-source tools such as Zabbix are opening up to AI through standard interfaces (MCP, OpenTelemetry) rather than shipping their own model."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité, l'AIOps ne remplace pas le technicien mais change son travail : moins de tri d'alertes, davantage de paramétrage et de validation des actions proposées. La condition préalable reste une supervision complète et fiable, car un agent IA ne peut corréler que les données qu'on lui fournit.",
+            "en": "For a local authority's IT department, AIOps does not replace the technician but changes the job: less alert triage, more configuration and approval of suggested actions. The prerequisite is still complete and reliable monitoring, because an AI agent can only correlate the data it is given."
+          },
+          "opinion": {
+            "fr": "Ce qui me frappe, c'est que la valeur de l'IA dépend entièrement de la qualité de la supervision en amont. Pendant mon stage, la haute disponibilité de Zabbix et le proxy installé en DMZ visaient justement à ne perdre aucune donnée. J'en retiens qu'il faut maîtriser ces fondations avant de parler d'IA, et je vais suivre de près l'arrivée des agents IA dans Zabbix 8.0.",
+            "en": "What strikes me is that the value of AI depends entirely on the quality of the monitoring behind it. During my internship, Zabbix high availability and the proxy installed in the DMZ were designed precisely so that no data would be lost. My takeaway is that these foundations must be mastered before talking about AI, and I will closely follow the arrival of AI agents in Zabbix 8.0."
+          },
+          "sources": [
+            "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html",
+            "https://biztechmagazine.com/article/2026/06/cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks",
+            "https://everywan.com/en/blog/zabbix-8-0-what-actually-changes"
+          ]
         }
       ]
     },
@@ -92,6 +136,51 @@
             "en": "Since 17 October 2024"
           }
         }
+      ],
+      "reports": [
+        {
+          "date": "2026-10-12",
+          "title": {
+            "fr": "NIS 2 : une transposition française toujours en attente",
+            "en": "NIS 2: France's transposition is still pending"
+          },
+          "summary": {
+            "fr": "La France n'a toujours pas transposé la directive NIS 2, alors que l'échéance européenne était fixée au 17 octobre 2024. Le projet de loi Résilience, adopté par le Sénat le 12 mars 2025, devait être débattu à l'Assemblée nationale les 7 et 9 octobre 2026. Le 6 octobre, son examen a de nouveau été reporté faute de place à l'ordre du jour ; le rapporteur Éric Bothorel espère une réinscription d'ici deux à trois semaines.\n\nEn attendant, l'ANSSI prépare les organisations. Depuis le 17 mars 2026, elle met à disposition le Référentiel Cyber France (ReCyF), un document de travail qui décrit les mesures de sécurité attendues, et propose un préenregistrement en ligne des futures entités concernées.",
+            "en": "France has still not transposed the NIS 2 directive, although the EU deadline was 17 October 2024. The Resilience bill, passed by the Senate on 12 March 2025, was due to be debated at the National Assembly on 7 and 9 October 2026. On 6 October its examination was postponed again for lack of space on the agenda; rapporteur Éric Bothorel hopes it will be rescheduled within two to three weeks.\n\nIn the meantime, ANSSI is helping organisations prepare. Since 17 March 2026 it has published the French Cyber Framework (ReCyF), a working document describing the expected security measures, and offers online pre-registration for future covered entities."
+          },
+          "analysis": [
+            {
+              "fr": "Le périmètre change d'échelle : on passe de quelques centaines d'opérateurs sous NIS 1 à environ 15 000 entités selon les estimations, classées « essentielles » ou « importantes ».",
+              "en": "The scope changes scale: from a few hundred operators under NIS 1 to around 15,000 entities according to estimates, classed as \"essential\" or \"important\"."
+            },
+            {
+              "fr": "Les obligations sont connues même sans loi française : gestion des risques, signalement des incidents (alerte sous 24 h, notification sous 72 h, rapport final sous un mois) et responsabilité des dirigeants découlent directement de la directive.",
+              "en": "The obligations are known even without a French law: risk management, incident reporting (warning within 24 h, notification within 72 h, final report within a month) and executive accountability come straight from the directive."
+            },
+            {
+              "fr": "Le retard entretient l'incertitude : les seuils, les listes de secteurs et les modalités d'enregistrement seront fixés par les décrets d'application, publiés seulement après le vote.",
+              "en": "The delay keeps uncertainty alive: thresholds, sector lists and registration procedures will be set by implementing decrees, published only after the vote."
+            },
+            {
+              "fr": "Les sanctions prévues par la directive, jusqu'à 10 M€ ou 2 % du chiffre d'affaires mondial pour une entité essentielle, poussent à anticiper plutôt qu'à attendre.",
+              "en": "The penalties set by the directive, up to €10M or 2% of worldwide turnover for an essential entity, encourage organisations to prepare rather than wait."
+            }
+          ],
+          "impact": {
+            "fr": "Les collectivités sont directement visées : le seuil envisagé pour les communes est de 30 000 habitants, mais il ne sera définitif qu'avec les décrets. Une DSI comme celle des Sables d'Olonne a intérêt à se comparer dès maintenant au ReCyF, à formaliser sa procédure de gestion des incidents et à sensibiliser les élus et la direction.",
+            "en": "Local authorities are directly targeted: the threshold being considered for municipalities is 30,000 inhabitants, though it will only be final once the decrees are out. An IT department like that of Les Sables d'Olonne would do well to benchmark itself against ReCyF now, formalise its incident management procedure and brief elected officials and management."
+          },
+          "opinion": {
+            "fr": "NIS 2 me montre que la cybersécurité n'est plus seulement une affaire technique : elle engage aussi la direction et le juridique. Des tâches que j'ai réalisées en stage, comme la supervision, la gestion des accès et la documentation, deviennent des obligations qu'il faudra pouvoir justifier. Je vais suivre le vote de la loi et la publication des décrets.",
+            "en": "NIS 2 shows me that cybersecurity is no longer just a technical matter: it also involves management and legal teams. Tasks I carried out during my internship, such as monitoring, access management and documentation, are becoming obligations that will have to be demonstrated. I will follow the vote on the bill and the publication of the decrees."
+          },
+          "sources": [
+            "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/",
+            "https://www.legiscope.com/blog/transposition-nis2-france.html",
+            "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+            "https://www.neova.tech/blog/nis2-collectivites-2026-loi-resilience-mise-en-conformite"
+          ]
+        }
       ]
     },
     "sdwan": {
@@ -139,6 +228,50 @@
             "fr": "Tendance 2026",
             "en": "2026 trend"
           }
+        }
+      ],
+      "reports": [
+        {
+          "date": "2026-10-12",
+          "title": {
+            "fr": "Le SD-WAN se fond dans des plateformes SASE complètes",
+            "en": "SD-WAN is merging into full SASE platforms"
+          },
+          "summary": {
+            "fr": "Le SD-WAN s'achète de moins en moins seul : il est désormais intégré à des offres SASE qui y ajoutent des services de sécurité fournis depuis le cloud. Le classement Gartner des plateformes SASE publié en août 2026 place Netskope, Cato Networks, Palo Alto Networks et Zscaler parmi les « Leaders », tandis que Fortinet et Cisco sont « Challengers ». Gartner estime que ce marché dépassera 18 milliards de dollars en 2026.\n\nLa concentration du secteur se poursuit. En juillet 2025, HPE a finalisé le rachat de Juniper Networks pour environ 14 milliards de dollars, réunissant son SD-WAN EdgeConnect et l'IA réseau Mist de Juniper.",
+            "en": "SD-WAN is less and less bought on its own: it is now part of SASE offers that add cloud-delivered security services. Gartner's SASE platforms ranking published in August 2026 names Netskope, Cato Networks, Palo Alto Networks and Zscaler as \"Leaders\", while Fortinet and Cisco are \"Challengers\". Gartner expects the market to exceed $18 billion in 2026.\n\nThe sector keeps consolidating. In July 2025 HPE completed its acquisition of Juniper Networks for about $14 billion, bringing together its EdgeConnect SD-WAN and Juniper's Mist network AI."
+          },
+          "analysis": [
+            {
+              "fr": "Réseau et sécurité se gèrent désormais ensemble : un même éditeur fournit la connexion entre les sites et le contrôle des accès (ZTNA, passerelle web sécurisée, CASB).",
+              "en": "Networking and security are now managed together: the same vendor provides site-to-site connectivity and access control (ZTNA, secure web gateway, CASB)."
+            },
+            {
+              "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022.",
+              "en": "Gartner predicted that 60% of new SD-WAN purchases in 2026 would be part of a single-vendor SASE offer, up from 15% in 2022."
+            },
+            {
+              "fr": "La simplicité d'exploitation devient un critère de choix : Gartner reproche par exemple à Cisco la complexité de gestion de ses fonctions SD-WAN et SSE utilisées ensemble.",
+              "en": "Ease of operation is becoming a selection criterion: Gartner for instance criticises Cisco for the complexity of managing its SD-WAN and SSE functions together."
+            },
+            {
+              "fr": "L'IA générative commence à servir à la configuration initiale des réseaux, ce qui rejoint la tendance AIOps.",
+              "en": "Generative AI is starting to be used for initial network configuration, which ties in with the AIOps trend."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une organisation répartie sur plusieurs sites, comme une mairie avec ses écoles, médiathèques et musée, le SD-WAN permet de fiabiliser les liaisons et de les piloter depuis une seule console. Le passage au SASE pose en revanche la question de la dépendance à un fournisseur cloud et du coût des abonnements.",
+            "en": "For an organisation spread over several sites, such as a town hall with its schools, libraries and museum, SD-WAN makes links more reliable and lets them be managed from a single console. Moving to SASE, however, raises the question of dependence on a cloud provider and of subscription costs."
+          },
+          "opinion": {
+            "fr": "Les pare-feu SonicWall que j'ai configurés pendant mon stage intègrent déjà des fonctions SD-WAN, ce qui montre que cette technologie est accessible même à une collectivité. J'en retiens qu'un technicien réseau doit aujourd'hui comprendre aussi la sécurité dans le cloud, et je souhaite approfondir le fonctionnement du ZTNA.",
+            "en": "The SonicWall firewalls I configured during my internship already include SD-WAN features, which shows that this technology is within reach even for a local authority. My takeaway is that a network technician now also needs to understand cloud security, and I want to learn more about how ZTNA works."
+          },
+          "sources": [
+            "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/",
+            "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/",
+            "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape"
+          ]
         }
       ]
     }

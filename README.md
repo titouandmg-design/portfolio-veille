@@ -1,7 +1,7 @@
 # Veille informatique — données du portfolio
 
 Ce dépôt contient `veille.json`, le fichier lu par le bloc « Veille informatique » du portfolio de Titouan Dumange (site Odoo).
-Il est mis à jour automatiquement chaque lundi : trois actualités récentes et sourcées par thème (AIOps, NIS 2, SD-WAN), en français et en anglais.
+Il est mis à jour automatiquement chaque lundi. Pour chaque thème (AIOps, NIS 2, SD-WAN), il contient un compte rendu de veille (synthèse, analyse, impacts, point de vue) et les actualités sourcées qui l'appuient, en français et en anglais. Les comptes rendus précédents sont conservés et consultables sur le site.
 
 Le bloc lit ce fichier à l'adresse :
 `https://raw.githubusercontent.com/titouandmg-design/portfolio-veille/main/veille.json`
@@ -10,15 +10,27 @@ Le bloc lit ce fichier à l'adresse :
 
 ```json
 {
-  "version": 1,
+  "version": 2,
   "updated": "AAAA-MM-JJ",
   "themes": {
-    "aiops": { "name": "AIOps",  "news": [ … ] },
-    "nis2":  { "name": "NIS 2",  "news": [ … ] },
-    "sdwan": { "name": "SD-WAN", "news": [ … ] }
+    "aiops": { "name": "AIOps",  "reports": [ … ], "news": [ … ] },
+    "nis2":  { "name": "NIS 2",  "reports": [ … ], "news": [ … ] },
+    "sdwan": { "name": "SD-WAN", "reports": [ … ], "news": [ … ] }
   }
 }
 ```
+
+Chaque compte rendu (`reports`, le plus récent en premier) :
+
+| Champ      | Contenu |
+|------------|---------|
+| `date`     | `AAAA-MM-JJ` |
+| `title`    | `{ "fr", "en" }`, l'enseignement principal en une phrase |
+| `summary`  | `{ "fr", "en" }`, synthèse en 2 paragraphes séparés par une ligne vide |
+| `analysis` | 3 à 5 points `{ "fr", "en" }` |
+| `impact`   | `{ "fr", "en" }`, impacts pour une organisation |
+| `opinion`  | `{ "fr", "en" }`, point de vue personnel |
+| `sources`  | 2 à 5 liens `https://` |
 
 Chaque actualité :
 
