@@ -1,10 +1,23 @@
 {
   "version": 2,
-  "updated": "2026-10-12",
+  "updated": "2026-10-19",
   "themes": {
     "aiops": {
       "name": "AIOps",
       "news": [
+        {
+          "date": "2026-10-01",
+          "title": {
+            "fr": "Zabbix 8.0 passe en version candidate avec OpenTelemetry et la supervision des services d'IA",
+            "en": "Zabbix 8.0 reaches release candidate with OpenTelemetry and AI service monitoring"
+          },
+          "text": {
+            "fr": "Zabbix a publié le 1er octobre 2026 la première version candidate (RC1) de Zabbix 8.0, sa prochaine version LTS. Elle ajoute un collecteur OpenTelemetry au proxy, l'affichage des traces dans l'interface, un stockage de l'historique dans ClickHouse et des modèles pour superviser l'API Claude, OpenAI Platform et GitHub Copilot. Aucune date de version finale n'est encore annoncée.",
+            "en": "On 1 October 2026 Zabbix released the first release candidate (RC1) of Zabbix 8.0, its next LTS version. It adds an OpenTelemetry collector to the proxy, trace display in the frontend, a ClickHouse history backend and templates to monitor the Claude API, the OpenAI Platform and GitHub Copilot. No date has been announced yet for the final release."
+          },
+          "source": "Zabbix (notes de version officielles)",
+          "url": "https://www.zabbix.com/rn/rn8.0.0rc1"
+        },
         {
           "date": "2026-09-23",
           "title": {
@@ -46,6 +59,49 @@
         }
       ],
       "reports": [
+        {
+          "date": "2026-10-19",
+          "title": {
+            "fr": "Zabbix 8.0 prépare la supervision à l'ère de l'IA par les standards ouverts plutôt que par un agent intégré",
+            "en": "Zabbix 8.0 readies monitoring for the AI era through open standards rather than a built-in agent"
+          },
+          "summary": {
+            "fr": "Le 1er octobre 2026, Zabbix a publié la première version candidate (RC1) de Zabbix 8.0, sa prochaine version à support long (LTS), après une alpha en février, une bêta 1 le 22 mai et une bêta 2 le 9 juillet. Cette version ajoute un collecteur OpenTelemetry au proxy, l'affichage des traces dans l'interface web, un type d'élément « Telemetry query », un stockage de l'historique dans ClickHouse et un nouveau type de valeur JSON. Elle apporte aussi des modèles pour superviser l'API Claude, OpenAI Platform et l'usage de GitHub Copilot, ainsi qu'une intégration avec une application mobile.\n\nLa semaine dernière, je notais que la feuille de route de Zabbix 8.0 prévoyait un serveur MCP permettant à des agents IA d'interroger la supervision. Les notes de la RC1 n'en font pas mention : l'éditeur mise pour l'instant sur l'ouverture des données (OpenTelemetry, traces, APM) et sur la supervision des services d'IA eux-mêmes. Le Zabbix Summit, organisé à Riga les 8 et 9 octobre, devait présenter cette version ; aucune date de sortie finale n'est encore publiée.",
+            "en": "On 1 October 2026 Zabbix released the first release candidate (RC1) of Zabbix 8.0, its next long-term support (LTS) version, following an alpha in February, beta 1 on 22 May and beta 2 on 9 July. This version adds an OpenTelemetry collector to the proxy, trace display in the web frontend, a \"Telemetry query\" item type, a ClickHouse history backend and a new JSON value type. It also brings templates to monitor the Claude API, the OpenAI Platform and GitHub Copilot usage, as well as a mobile application integration.\n\nLast week I noted that the Zabbix 8.0 roadmap included an MCP server so that AI agents could query monitoring data. The RC1 release notes do not mention it: for now the vendor is focusing on opening up data (OpenTelemetry, traces, APM) and on monitoring AI services themselves. The Zabbix Summit, held in Riga on 8 and 9 October, was set to present this version; no final release date has been published yet."
+          },
+          "analysis": [
+            {
+              "fr": "OpenTelemetry devient le point de rencontre entre supervision classique et observabilité : Zabbix peut désormais recevoir des traces applicatives, ce qui le rapproche des outils d'APM.",
+              "en": "OpenTelemetry is becoming the meeting point between traditional monitoring and observability: Zabbix can now ingest application traces, bringing it closer to APM tools."
+            },
+            {
+              "fr": "Les services d'IA deviennent des dépendances à superviser comme les autres : des modèles dédiés à l'API Claude, à OpenAI Platform et à GitHub Copilot apparaissent dans un outil de supervision généraliste.",
+              "en": "AI services are becoming dependencies to monitor like any other: dedicated templates for the Claude API, the OpenAI Platform and GitHub Copilot now appear in a general-purpose monitoring tool."
+            },
+            {
+              "fr": "Le stockage de l'historique dans ClickHouse répond à l'augmentation des volumes de données, condition préalable à toute analyse automatisée à grande échelle.",
+              "en": "The ClickHouse history backend addresses growing data volumes, a prerequisite for any large-scale automated analysis."
+            },
+            {
+              "fr": "Les fonctions d'agent IA annoncées dans la feuille de route ne figurent pas dans la RC1 : entre les annonces et le logiciel livré, il faut vérifier sur les notes de version officielles.",
+              "en": "The AI agent features announced in the roadmap are not in RC1: between announcements and shipped software, the official release notes are what count."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité qui utilise Zabbix, une nouvelle LTS est l'occasion de planifier la migration : tests sur une maquette, vérification des modèles et du proxy, puis mise à jour pendant une période calme. Le stockage ClickHouse et OpenTelemetry ne sont utiles que si l'on en a besoin ; pour un technicien, l'enjeu est surtout de connaître ces nouveautés et de lire les notes de mise à niveau avant d'agir sur un serveur en production.",
+            "en": "For a local-authority IT department that runs Zabbix, a new LTS is the moment to plan the migration: tests on a lab setup, checking templates and the proxy, then upgrading during a quiet period. ClickHouse storage and OpenTelemetry are only useful if there is a need for them; for a technician, the point is mainly to know these new features and to read the upgrade notes before touching a production server."
+          },
+          "opinion": {
+            "fr": "Je retiens qu'il faut se fier aux notes de version plutôt qu'aux annonces : le serveur MCP dont je parlais la semaine dernière n'est pas dans cette RC1. Pendant mon stage, j'ai travaillé sur Zabbix 7 avec un proxy en DMZ ; l'arrivée d'un collecteur OpenTelemetry dans ce même proxy m'intéresse directement. Je compte installer la RC1 sur une machine virtuelle pour tester la migration et voir ce que change la remontée de traces.",
+            "en": "My takeaway is to trust release notes rather than announcements: the MCP server I mentioned last week is not in this RC1. During my internship I worked on Zabbix 7 with a proxy in the DMZ, so an OpenTelemetry collector in that same proxy is directly relevant to me. I plan to install the RC1 on a virtual machine to test the migration and see what trace collection changes."
+          },
+          "sources": [
+            "https://www.zabbix.com/rn/rn8.0.0rc1",
+            "https://www.zabbix.com/release_notes",
+            "https://blog.zabbix.com/learn-connect-and-level-up-at-zabbix-summit-2026/33415/",
+            "https://everywan.com/en/blog/zabbix-8-0-what-actually-changes"
+          ]
+        },
         {
           "date": "2026-10-12",
           "title": {
@@ -94,6 +150,19 @@
       "name": "NIS 2",
       "news": [
         {
+          "date": "2026-10-08",
+          "title": {
+            "fr": "L'ANSSI envisage une conformité complète à NIS 2 fin 2028",
+            "en": "ANSSI considers full NIS 2 compliance by the end of 2028"
+          },
+          "text": {
+            "fr": "Entendu le 1er octobre 2026 par la commission spéciale de l'Assemblée nationale, le directeur général de l'ANSSI, Vincent Strubel, a proposé de fixer à fin 2028 l'échéance de conformité complète pour toutes les entités, au lieu d'un délai de trois ans après la loi. Il a appelé à ne pas « surtransposer » la directive et a indiqué que des exercices à blanc précéderaient les contrôles.",
+            "en": "Heard on 1 October 2026 by the National Assembly's special committee, ANSSI director general Vincent Strubel proposed setting the end of 2028 as the full-compliance deadline for all entities, instead of a three-year period after the law. He urged lawmakers not to \"over-transpose\" the directive and said trial exercises would come before inspections."
+          },
+          "source": "Silicon.fr",
+          "url": "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563"
+        },
+        {
           "date": "2026-10-06",
           "title": {
             "fr": "Nouveau report à l'Assemblée nationale",
@@ -138,6 +207,53 @@
         }
       ],
       "reports": [
+        {
+          "date": "2026-10-19",
+          "title": {
+            "fr": "Sans loi votée, l'ANSSI fixe déjà un horizon : une conformité complète à NIS 2 fin 2028",
+            "en": "With no law passed, ANSSI already sets a horizon: full NIS 2 compliance by the end of 2028"
+          },
+          "summary": {
+            "fr": "Le 17 octobre 2026, la France a atteint deux ans de retard dans la transposition de NIS 2. Le projet de loi Résilience, retiré le 6 octobre de l'ordre du jour de l'Assemblée nationale, n'avait toujours pas de nouvelle date d'examen le 13 octobre, alors que la Commission européenne a saisi la Cour de justice de l'Union européenne contre la France en juillet 2026.\n\nLe calendrier d'application, lui, se précise. Auditionné le 1er octobre par la commission spéciale, Vincent Strubel, directeur général de l'ANSSI, a proposé de viser une conformité complète de toutes les entités fin 2028, au lieu d'un délai de trois ans après le vote. Il a demandé de ne pas « surtransposer » la directive et annoncé des exercices à blanc avant les contrôles. L'ANSSI compte 670 équivalents temps plein pour passer de quelques centaines à environ 15 000 entités régulées, dans 18 secteurs au lieu de 6.",
+            "en": "On 17 October 2026 France reached two years of delay in transposing NIS 2. The Resilience bill, withdrawn from the National Assembly's agenda on 6 October, still had no new examination date on 13 October, while the European Commission referred France to the Court of Justice of the European Union in July 2026.\n\nThe enforcement timeline, however, is becoming clearer. Heard on 1 October by the special committee, ANSSI director general Vincent Strubel proposed aiming for full compliance of all entities by the end of 2028, instead of a three-year period after the vote. He asked lawmakers not to \"over-transpose\" the directive and announced trial exercises before inspections. ANSSI has 670 full-time equivalents to go from a few hundred to around 15,000 regulated entities, in 18 sectors instead of 6."
+          },
+          "analysis": [
+            {
+              "fr": "Une échéance fixe à fin 2028 donne aux organisations une date de référence qui ne dépend plus du jour du vote, ce qui facilite la planification budgétaire.",
+              "en": "A fixed end-2028 deadline gives organisations a reference date that no longer depends on when the law is voted, which makes budget planning easier."
+            },
+            {
+              "fr": "Le retard parlementaire réduit d'autant le temps de préparation réel : Vincent Strubel a lui-même souligné que les reports pèsent sur les arbitrages budgétaires des entités.",
+              "en": "The parliamentary delay shrinks the real preparation time accordingly: Vincent Strubel himself stressed that postponements weigh on entities' budget decisions."
+            },
+            {
+              "fr": "L'approche annoncée est progressive : exercices à blanc avant les contrôles et refus de la surtransposition, ce qui privilégie l'accompagnement à la sanction dans un premier temps.",
+              "en": "The announced approach is gradual: trial exercises before inspections and no over-transposition, favouring support over sanctions at first."
+            },
+            {
+              "fr": "Les moyens de l'ANSSI restent un point de tension : 670 équivalents temps plein, contre environ 1 800 à 2 000 agents pour le BSI allemand selon son directeur.",
+              "en": "ANSSI's resources remain a pressure point: 670 full-time equivalents, compared with about 1,800 to 2,000 staff at Germany's BSI according to its director."
+            },
+            {
+              "fr": "Les actions imposées aux ministères d'ici le 31 décembre 2026 (authentification multifacteur des administrateurs, EDR ou XDR sur les postes et serveurs, procédures de correctifs, remplacement des composants obsolètes) donnent un aperçu concret des mesures attendues.",
+              "en": "The actions required of ministries by 31 December 2026 (multi-factor authentication for administrators, EDR or XDR on workstations and servers, patching procedures, replacement of obsolete components) offer a concrete preview of the expected measures."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une collectivité comme les Sables d'Olonne, la date de fin 2028 sert de cible : il reste environ deux ans pour aligner les pratiques sur le ReCyF. La liste des actions demandées à l'État est un bon point de départ pour un plan d'action local : authentification multifacteur pour les comptes administrateurs de l'Active Directory, procédure de correctifs écrite, inventaire des équipements obsolètes et journalisation suffisante. Pour le technicien, cela signifie documenter et prouver ce qui est fait, pas seulement le faire.",
+            "en": "For a local authority such as Les Sables d'Olonne, the end-2028 date works as a target: about two years remain to align practices with ReCyF. The list of actions required of the State is a good starting point for a local action plan: multi-factor authentication for Active Directory administrator accounts, a written patching procedure, an inventory of obsolete equipment and sufficient logging. For the technician, this means documenting and proving what is done, not just doing it."
+          },
+          "opinion": {
+            "fr": "Ce qui me marque cette semaine, c'est que l'ANSSI avance sans attendre la loi. Les mesures citées pour les ministères, comme l'authentification multifacteur des administrateurs ou une procédure de correctifs, correspondent à des sujets que j'ai rencontrés en stage sur l'Active Directory et les pare-feu SonicWall. Je vais suivre la réinscription du texte à l'Assemblée et voir si l'échéance de fin 2028 est inscrite dans la loi ou dans les décrets.",
+            "en": "What strikes me this week is that ANSSI is moving ahead without waiting for the law. The measures cited for ministries, such as multi-factor authentication for administrators or a patching procedure, match topics I came across during my internship on Active Directory and SonicWall firewalls. I will follow the bill's return to the Assembly agenda and see whether the end-2028 deadline ends up in the law or in the decrees."
+          },
+          "sources": [
+            "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563",
+            "https://www.leto.legal/news/anssi-nis-2-conformite-complete-fin-2028-strubel-2026",
+            "https://www.silicon.fr/cybersecurite-1371/nis2-la-loi-attend-les-attaquants-non-229628",
+            "https://www.leto.legal/news/assemblee-nationale-report-projet-loi-resilience-nis2-octobre-2026"
+          ]
+        },
         {
           "date": "2026-10-12",
           "title": {
@@ -187,6 +303,19 @@
       "name": "SD-WAN",
       "news": [
         {
+          "date": "2026-09-30",
+          "title": {
+            "fr": "Faille critique exploitée dans Cisco Catalyst SD-WAN Manager",
+            "en": "Critical exploited flaw in Cisco Catalyst SD-WAN Manager"
+          },
+          "text": {
+            "fr": "Cisco a publié le 30 septembre 2026 un avis sur la vulnérabilité CVE-2026-76504 (score CVSS 9,8) : une erreur de traitement de l'encodage des URL permet à un attaquant non authentifié d'obtenir un accès administrateur à l'API de Catalyst SD-WAN Manager. Cisco indique avoir eu connaissance d'une exploitation active en septembre ; aucun contournement n'existe et une mise à jour vers une version corrigée est nécessaire.",
+            "en": "On 30 September 2026 Cisco published an advisory on vulnerability CVE-2026-76504 (CVSS score 9.8): improper handling of URL encoding lets an unauthenticated attacker gain administrator access to the Catalyst SD-WAN Manager API. Cisco says it became aware of active exploitation in September; there is no workaround and an upgrade to a fixed release is required."
+          },
+          "source": "Cisco Security Advisory",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU"
+        },
+        {
           "date": "2026-08",
           "title": {
             "fr": "Gartner publie son classement SASE 2026",
@@ -231,6 +360,48 @@
         }
       ],
       "reports": [
+        {
+          "date": "2026-10-19",
+          "title": {
+            "fr": "La console centrale du SD-WAN devient une cible prioritaire des attaquants",
+            "en": "The central SD-WAN console is becoming a prime target for attackers"
+          },
+          "summary": {
+            "fr": "Le 30 septembre 2026, Cisco a publié un avis de sécurité sur la vulnérabilité CVE-2026-76504, notée 9,8 sur 10, qui touche Catalyst SD-WAN Manager quelle que soit sa configuration. Une erreur de traitement de l'encodage des URL permet à un attaquant non authentifié, à distance, d'obtenir un accès administrateur à l'API. Cisco a eu connaissance d'une exploitation active en septembre ; l'agence américaine CISA a ajouté la faille à son catalogue des vulnérabilités exploitées le jour même et a donné aux agences fédérales jusqu'au 3 octobre pour corriger. Il n'existe pas de contournement : seule la mise à jour vers une version corrigée, par exemple 20.9.10.1 ou 20.12.8.2, règle le problème.\n\nLa semaine dernière, je notais que le SD-WAN se fondait dans des plateformes SASE pilotées depuis une console unique. Cette faille montre l'envers du décor : selon SDxCentral, elle s'ajoute aux failles de ce produit signalées en février et en mai, que Cisco Talos relie au groupe UAT-8616, puis à une faille d'accès root en juin.",
+            "en": "On 30 September 2026 Cisco published a security advisory on vulnerability CVE-2026-76504, rated 9.8 out of 10, which affects Catalyst SD-WAN Manager regardless of configuration. Improper handling of URL encoding lets a remote, unauthenticated attacker gain administrator access to the API. Cisco became aware of active exploitation in September; the US agency CISA added the flaw to its catalogue of exploited vulnerabilities the same day and gave federal agencies until 3 October to fix it. There is no workaround: only upgrading to a fixed release, for example 20.9.10.1 or 20.12.8.2, solves the problem.\n\nLast week I noted that SD-WAN was merging into SASE platforms managed from a single console. This flaw shows the other side: according to SDxCentral, it adds to the flaws in this product reported in February and May, which Cisco Talos links to the UAT-8616 group, and to a root access flaw in June."
+          },
+          "analysis": [
+            {
+              "fr": "Centraliser la gestion simplifie l'exploitation, mais concentre le risque : un attaquant qui prend la console d'administration peut agir sur tous les sites reliés.",
+              "en": "Centralised management simplifies operations but concentrates risk: an attacker who takes over the management console can act on every connected site."
+            },
+            {
+              "fr": "L'exposition de la console sur Internet est le facteur aggravant : Cisco recommande d'en restreindre l'accès en attendant la mise à jour des déploiements sur site.",
+              "en": "Exposing the console to the internet is the aggravating factor: Cisco recommends restricting access to it until on-premises deployments are upgraded."
+            },
+            {
+              "fr": "La répétition des failles sur un même produit en 2026 montre que les équipements de bordure et leurs consoles sont ciblés de façon suivie par des groupes organisés.",
+              "en": "Repeated flaws in the same product during 2026 show that edge equipment and its consoles are being steadily targeted by organised groups."
+            },
+            {
+              "fr": "Corriger ne suffit pas : Cisco demande aussi d'analyser les journaux du service proxy et du serveur vManage pour repérer des connexions ou des comptes inconnus, car l'exploitation a pu précéder le correctif.",
+              "en": "Patching is not enough: Cisco also asks customers to review the service proxy and vManage server logs for unknown connections or accounts, since exploitation may have preceded the fix."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité qui relie mairie, écoles et médiathèques par un SD-WAN, quel que soit l'éditeur, la console de gestion doit être traitée comme un équipement critique : pas d'accès direct depuis Internet, accès d'administration filtré et protégé par authentification forte, abonnement aux avis de sécurité de l'éditeur et du CERT-FR. Pour le technicien, cela implique de savoir appliquer rapidement un correctif d'urgence, de vérifier les journaux après coup et de tenir à jour l'inventaire des versions installées.",
+            "en": "For a local-authority IT department linking the town hall, schools and libraries over SD-WAN, whatever the vendor, the management console must be treated as critical equipment: no direct access from the internet, filtered administration access protected by strong authentication, and a subscription to the vendor's and CERT-FR's security advisories. For the technician, this means being able to apply an emergency patch quickly, check logs afterwards and keep an up-to-date inventory of installed versions."
+          },
+          "opinion": {
+            "fr": "Cette faille me rappelle que l'interface d'administration d'un équipement réseau est souvent ce qu'il y a de plus sensible. Pendant mon stage, sur les pare-feu SonicWall, l'accès à la gestion n'était pas ouvert depuis Internet, et je comprends mieux pourquoi. Je vais prendre l'habitude de suivre les avis du CERT-FR et de vérifier, pour chaque équipement que je configure, d'où son interface d'administration est accessible.",
+            "en": "This flaw reminds me that a network device's management interface is often its most sensitive part. During my internship, management access to the SonicWall firewalls was not open from the internet, and I now understand better why. I will make a habit of following CERT-FR advisories and checking, for every device I configure, where its management interface can be reached from."
+          },
+          "sources": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+            "https://www.sdxcentral.com/news/cisco-discloses-yet-another-admin-access-flaw-in-catalyst-sd-wan-manager/",
+            "https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html"
+          ]
+        },
         {
           "date": "2026-10-12",
           "title": {
