@@ -1,10 +1,23 @@
 {
   "version": 2,
-  "updated": "2026-10-19",
+  "updated": "2026-10-26",
   "themes": {
     "aiops": {
       "name": "AIOps",
       "news": [
+        {
+          "date": "2026-10-21",
+          "title": {
+            "fr": "Zabbix 8.0 publie sa deuxième version candidate et durcit l'accès à son API",
+            "en": "Zabbix 8.0 ships its second release candidate and tightens API access"
+          },
+          "text": {
+            "fr": "Le 21 octobre 2026, Zabbix a publié la version candidate 8.0.0rc2 de sa future version LTS. Les notes de version mentionnent l'accès à l'API désactivé par défaut pour tous les rôles utilisateurs, la suppression des anciens protocoles du trapper et le collecteur OpenTelemetry du proxy. Un test de migration publié le 24 octobre par ComputingForGeeks rappelle que Zabbix 8.0 exige PHP 8.2 et PostgreSQL 15 ou MariaDB 10.11 au minimum.",
+            "en": "On 21 October 2026, Zabbix released 8.0.0rc2, a release candidate of its upcoming LTS version. The release notes list API access turned off by default for all user roles, the removal of legacy trapper protocols and the proxy's OpenTelemetry collector. An upgrade test published on 24 October by ComputingForGeeks points out that Zabbix 8.0 requires at least PHP 8.2 and PostgreSQL 15 or MariaDB 10.11."
+          },
+          "source": "Zabbix (notes de version officielles)",
+          "url": "https://www.zabbix.com/rn/rn8.0.0rc2"
+        },
         {
           "date": "2026-10-01",
           "title": {
@@ -59,6 +72,52 @@
         }
       ],
       "reports": [
+        {
+          "date": "2026-10-26",
+          "title": {
+            "fr": "Avec la RC2, Zabbix 8.0 se rapproche de la version finale : la migration se prépare dès maintenant, prérequis et droits d'API compris",
+            "en": "With RC2, Zabbix 8.0 nears its final release: the migration should be prepared now, prerequisites and API permissions included"
+          },
+          "summary": {
+            "fr": "Le 21 octobre 2026, trois semaines après la RC1 du 1er octobre, Zabbix a publié la version candidate 8.0.0rc2 de sa prochaine version LTS. Les notes de version reprennent les apports déjà repérés (collecteur OpenTelemetry dans le proxy, affichage des traces, historique dans ClickHouse, modèles pour l'API Claude et OpenAI Platform) et insistent sur la sécurité : l'accès à l'API est désactivé par défaut pour tous les rôles, les méthodes hostinterface ne sont plus publiques sauf get, et les anciens protocoles du trapper sont supprimés. Aucune date de sortie finale n'est annoncée et aucune fonction d'agent IA n'apparaît encore.\n\nLe 24 octobre, ComputingForGeeks a publié un test de migration de Zabbix 7.0 vers la RC2 sur Ubuntu et Rocky Linux. Il rappelle les nouveaux minimums : PHP 8.2, MariaDB 10.11, MySQL 8.4, PostgreSQL 15 et TimescaleDB 2.20, sans prise en charge d'Oracle. La mise à niveau du schéma a pris environ 9 secondes sur MariaDB et 28 secondes sur PostgreSQL, mais le retour arrière a demandé plusieurs essais. L'auteur conseille d'attendre la version finale pour la production.",
+            "en": "On 21 October 2026, three weeks after RC1 on 1 October, Zabbix released 8.0.0rc2, a release candidate of its next LTS version. The release notes include the features already identified (OpenTelemetry collector in the proxy, trace visualisation, ClickHouse history storage, templates for the Claude API and OpenAI Platform) and put the emphasis on security: API access is turned off by default for all roles, hostinterface methods are no longer public except get, and legacy trapper protocols are removed. No final release date has been announced and no AI agent feature appears yet.\n\nOn 24 October, ComputingForGeeks published an upgrade test from Zabbix 7.0 to RC2 on Ubuntu and Rocky Linux. It recalls the new minimums: PHP 8.2, MariaDB 10.11, MySQL 8.4, PostgreSQL 15 and TimescaleDB 2.20, with Oracle no longer supported. The schema upgrade took about 9 seconds on MariaDB and 28 seconds on PostgreSQL, but rolling back took several attempts. The author advises waiting for the final release before upgrading production."
+          },
+          "analysis": [
+            {
+              "fr": "Une deuxième version candidate signale que la version finale approche : c'est le moment de tester la migration, pas encore de l'appliquer en production.",
+              "en": "A second release candidate signals that the final release is close: now is the time to test the migration, not yet to apply it in production."
+            },
+            {
+              "fr": "La sécurité par défaut progresse : un rôle n'a plus accès à l'API tant qu'on ne l'a pas autorisé, ce qui réduit la surface d'attaque mais peut casser des scripts ou intégrations existants.",
+              "en": "Secure defaults are improving: a role no longer has API access until it is explicitly allowed, which reduces the attack surface but can break existing scripts or integrations."
+            },
+            {
+              "fr": "Les prérequis montent nettement (PHP 8.2, PostgreSQL 15, MariaDB 10.11) : sur des distributions anciennes comme Rocky Linux 9 avec ses paquets par défaut, la migration de Zabbix entraîne celle de la pile logicielle.",
+              "en": "Prerequisites rise sharply (PHP 8.2, PostgreSQL 15, MariaDB 10.11): on older distributions such as Rocky Linux 9 with its default packages, upgrading Zabbix means upgrading the software stack too."
+            },
+            {
+              "fr": "Les modèles et types de média ne sont pas mis à jour automatiquement : profiter des nouveautés demande un travail manuel d'import et de vérification.",
+              "en": "Templates and media types are not upgraded automatically: benefiting from the new features requires manual import and checking."
+            },
+            {
+              "fr": "Comme pour la RC1, l'intelligence artificielle reste surtout un objet supervisé (modèles pour les API d'IA) plutôt qu'un agent intégré à l'outil.",
+              "en": "As with RC1, artificial intelligence remains mostly something to monitor (templates for AI APIs) rather than an agent built into the tool."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité équipée de Zabbix, la RC2 permet de préparer un plan de migration concret : inventaire des versions de PHP et de la base de données, sauvegarde ou instantané de la machine virtuelle, mise à jour du serveur avant les proxys, puis import des nouveaux modèles. Il faut aussi recenser les scripts et outils qui utilisent l'API, car leurs rôles devront être autorisés explicitement. Pour le technicien, c'est un exercice classique d'exploitation : lire les notes de mise à niveau, tester sur une maquette et prévoir un retour arrière fiable.",
+            "en": "For a local authority IT department running Zabbix, RC2 makes it possible to prepare a concrete migration plan: inventory of PHP and database versions, backup or VM snapshot, upgrading the server before the proxies, then importing the new templates. Scripts and tools that use the API also need to be listed, since their roles will have to be explicitly allowed. For the technician, it is a classic operations exercise: read the upgrade notes, test on a lab setup and plan a reliable rollback."
+          },
+          "opinion": {
+            "fr": "La semaine dernière, je comptais tester la RC1 sur une machine virtuelle ; la RC2 et ce retour d'expérience me donnent une liste de vérifications précise. Pendant mon stage, notre serveur Zabbix 7 et son proxy en DMZ tournaient sur des systèmes dont je devrai contrôler les versions de PHP et de base de données avant toute migration. Le changement sur l'API me parle aussi : un script qui interroge Zabbix pourrait cesser de fonctionner sans que l'on comprenne pourquoi. Je vais refaire la migration sur une maquette, en notant chaque étape et le retour arrière.",
+            "en": "Last week, I planned to test RC1 on a virtual machine; RC2 and this hands-on report give me a precise checklist. During my internship, our Zabbix 7 server and its DMZ proxy ran on systems whose PHP and database versions I would need to check before any migration. The API change also matters to me: a script that queries Zabbix could stop working without anyone understanding why. I will rehearse the migration on a lab setup, documenting each step and the rollback."
+          },
+          "sources": [
+            "https://www.zabbix.com/rn/rn8.0.0rc2",
+            "https://computingforgeeks.com/upgrade-zabbix-7-to-8/",
+            "https://www.zabbix.com/rn/rn8.0.0rc1"
+          ]
+        },
         {
           "date": "2026-10-19",
           "title": {
