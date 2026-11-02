@@ -92,8 +92,8 @@
             "en": "Zabbix 8.0.0rc3: moving towards a final release focused on security and data scalability"
           },
           "summary": {
-            "fr": "Le 29 octobre 2026, Zabbix a franchi une nouvelle étape vers sa version LTS avec la sortie de la RC3. Cette version consolide les apports majeurs de la RC1 et RC2 (OpenTelemetry, ClickHouse, modèles IA) tout en apportant des corrections critiques de sécurité. Le retrait de l'accès public aux méthodes hostinterface, hormis la méthode get, confirme la volonté de l'éditeur de réduire la surface d'attaque de l'API, un point déjà soulevé lors de la RC2.\\n\\nParallèlement, Zabbix optimise sa capacité de traitement des données massives. L'ajout du support des clusters ClickHouse et l'extension de la compatibilité Elasticsearch (versions 8.x et 9.x) montrent que l'outil se positionne désormais comme une véritable plateforme d'observabilité capable de gérer des flux de données industriels, dépassant le cadre de la simple supervision réseau.",
-            "en": "On 29 October 2026, Zabbix took another step toward its LTS release with the launch of RC3. This version consolidates the major features of RC1 and RC2 (OpenTelemetry, ClickHouse, AI templates) while introducing critical security fixes. Removing public access from hostinterface methods, except for get, confirms the vendor's goal of reducing the API attack surface, a point already highlighted during RC2.\\n\\nIn parallel, Zabbix is optimizing its ability to handle massive data. The addition of ClickHouse cluster support and expanded Elasticsearch compatibility (versions 8.x and 9.x) show that the tool is now positioning itself as a true observability platform capable of managing industrial-scale data flows, moving beyond simple network monitoring."
+            "fr": "Le 29 octobre 2026, Zabbix a franchi une nouvelle étape vers sa version LTS avec la sortie de la RC3. Cette version consolide les apports majeurs de la RC1 et RC2 (OpenTelemetry, ClickHouse, modèles IA) tout en apportant des corrections critiques de sécurité. Le retrait de l'accès public aux méthodes hostinterface, hormis la méthode get, confirme la volonté de l'éditeur de réduire la surface d'attaque de l'API, un point déjà soulevé lors de la RC2.\n\nParallèlement, Zabbix optimise sa capacité de traitement des données massives. L'ajout du support des clusters ClickHouse et l'extension de la compatibilité Elasticsearch (versions 8.x et 9.x) montrent que l'outil se positionne désormais comme une véritable plateforme d'observabilité capable de gérer des flux de données industriels, dépassant le cadre de la simple supervision réseau.",
+            "en": "On 29 October 2026, Zabbix took another step toward its LTS release with the launch of RC3. This version consolidates the major features of RC1 and RC2 (OpenTelemetry, ClickHouse, AI templates) while introducing critical security fixes. Removing public access from hostinterface methods, except for get, confirms the vendor's goal of reducing the API attack surface, a point already highlighted during RC2.\n\nIn parallel, Zabbix is optimizing its ability to handle massive data. The addition of ClickHouse cluster support and expanded Elasticsearch compatibility (versions 8.x and 9.x) show that the tool is now positioning itself as a true observability platform capable of managing industrial-scale data flows, moving beyond simple network monitoring."
           },
           "analysis": [
             {
@@ -559,5 +559,315 @@
         }
       ]
     }
-  }
+  },
+  "boite": [
+    {
+      "date": "2026-10-29",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Zabbix 8.0 RC3",
+        "en": "Zabbix 8.0 RC3"
+      },
+      "source": "Zabbix (notes de version officielles)",
+      "url": "https://www.zabbix.com/rn/rn8.0.0rc3",
+      "appris": {
+        "fr": "La RC3 retire l'accès public aux méthodes hostinterface de l'API (sauf get), prend en charge les clusters ClickHouse et accepte Elasticsearch 8.x et 9.x.",
+        "en": "RC3 removes public access to the API's hostinterface methods (except get), supports ClickHouse clusters and accepts Elasticsearch 8.x and 9.x."
+      },
+      "interet": {
+        "fr": "Les scripts qui modifient les interfaces des hôtes par l'API pourraient ne plus fonctionner après la migration.",
+        "en": "Scripts that change host interfaces through the API might stop working after the upgrade."
+      },
+      "action": {
+        "fr": "Recenser les scripts qui utilisent l'API Zabbix",
+        "en": "List the scripts that use the Zabbix API"
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Zabbix 8.0 RC2 : API durcie",
+        "en": "Zabbix 8.0 RC2: hardened API"
+      },
+      "source": "Zabbix (notes de version officielles)",
+      "url": "https://www.zabbix.com/rn/rn8.0.0rc2",
+      "appris": {
+        "fr": "L'accès à l'API est désactivé par défaut pour tous les rôles. Zabbix 8.0 demandera PHP 8.2 et PostgreSQL 15 ou MariaDB 10.11 au minimum.",
+        "en": "API access is disabled by default for every role. Zabbix 8.0 will require at least PHP 8.2 and PostgreSQL 15 or MariaDB 10.11."
+      },
+      "interet": {
+        "fr": "Ces prérequis décident si un serveur de supervision peut être mis à jour sans réinstallation.",
+        "en": "These requirements decide whether a monitoring server can be upgraded without a reinstall."
+      },
+      "action": {
+        "fr": "Vérifier les versions de PHP et de la base du serveur Zabbix",
+        "en": "Check the PHP and database versions on the Zabbix server"
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "NIS 2 : conformité visée fin 2028",
+        "en": "NIS 2: compliance targeted for end of 2028"
+      },
+      "source": "Silicon.fr",
+      "url": "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563",
+      "appris": {
+        "fr": "Le directeur général de l'ANSSI a proposé fin 2028 comme échéance de conformité complète pour toutes les entités, avec des exercices à blanc avant les contrôles.",
+        "en": "The head of ANSSI proposed the end of 2028 as the full-compliance deadline for all entities, with dry runs before inspections."
+      },
+      "interet": {
+        "fr": "C'est une date concrète pour planifier la mise en conformité d'une DSI de collectivité.",
+        "en": "It gives a concrete date to plan the compliance work of a local authority's IT department."
+      },
+      "action": {
+        "fr": "Comparer les pratiques de la DSI avec le ReCyF",
+        "en": "Compare the IT department's practices with ReCyF"
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Transposition de NIS 2 reportée",
+        "en": "NIS 2 transposition postponed"
+      },
+      "source": "Next",
+      "url": "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/",
+      "appris": {
+        "fr": "L'examen du projet de loi Résilience, prévu les 7 et 9 octobre à l'Assemblée nationale, a été retiré de l'ordre du jour faute de place.",
+        "en": "The review of the Resilience bill, scheduled for 7 and 9 October at the National Assembly, was dropped from the agenda for lack of time."
+      },
+      "interet": {
+        "fr": "Le cadre légal n'est toujours pas fixé, même si les mesures attendues sont déjà connues.",
+        "en": "The legal framework is still not settled, even though the expected measures are already known."
+      },
+      "action": {
+        "fr": "Suivre la réinscription du texte",
+        "en": "Follow when the bill is rescheduled"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Zabbix 8.0 RC1 : OpenTelemetry et services d'IA",
+        "en": "Zabbix 8.0 RC1: OpenTelemetry and AI services"
+      },
+      "source": "Zabbix (notes de version officielles)",
+      "url": "https://www.zabbix.com/rn/rn8.0.0rc1",
+      "appris": {
+        "fr": "Zabbix 8.0 ajoute un collecteur OpenTelemetry au proxy, l'affichage des traces, l'historique dans ClickHouse et des modèles pour superviser des services d'IA.",
+        "en": "Zabbix 8.0 adds an OpenTelemetry collector to the proxy, trace display, ClickHouse history storage and templates to monitor AI services."
+      },
+      "interet": {
+        "fr": "La supervision ne se limite plus à savoir si un équipement répond : elle suit aussi les applications.",
+        "en": "Monitoring is no longer just about whether a device responds: it also follows applications."
+      },
+      "action": {
+        "fr": "Tester la version candidate sur une machine virtuelle",
+        "en": "Try the release candidate on a virtual machine"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Faille critique Cisco Catalyst SD-WAN Manager",
+        "en": "Critical flaw in Cisco Catalyst SD-WAN Manager"
+      },
+      "source": "Cisco Security Advisory",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+      "appris": {
+        "fr": "La CVE-2026-76504 (CVSS 9,8) donne à un attaquant non authentifié un accès administrateur à l'API. Elle est exploitée et seule une mise à jour la corrige.",
+        "en": "CVE-2026-76504 (CVSS 9.8) gives an unauthenticated attacker administrator access to the API. It is exploited and only an update fixes it."
+      },
+      "interet": {
+        "fr": "La console centrale d'un SD-WAN pilote tous les sites : une faille sur elle expose tout le réseau.",
+        "en": "The central SD-WAN console controls every site: a flaw in it exposes the whole network."
+      },
+      "action": {
+        "fr": "Vérifier les équipements concernés et suivre les avis du CERT-FR",
+        "en": "Check affected equipment and follow CERT-FR advisories"
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Agents IA en production (étude Cisco)",
+        "en": "AI agents in production (Cisco study)"
+      },
+      "source": "Cisco Newsroom",
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html",
+      "appris": {
+        "fr": "Selon Cisco et Omdia, 51 % des 1 000 responsables interrogés font déjà agir des agents IA sur leur réseau. Une organisation reçoit environ 4 100 alertes par jour, dont près de la moitié sont fermées sans analyse.",
+        "en": "According to Cisco and Omdia, 51% of the 1,000 IT leaders surveyed already let AI agents act on their network. An organisation receives about 4,100 alerts a day, almost half closed without analysis."
+      },
+      "interet": {
+        "fr": "Le nombre d'alertes ignorées explique pourquoi l'automatisation de la supervision progresse.",
+        "en": "The number of ignored alerts explains why monitoring automation is growing."
+      },
+      "action": {
+        "fr": "Observer le volume d'alertes Zabbix pendant le stage",
+        "en": "Watch the volume of Zabbix alerts during the internship"
+      }
+    },
+    {
+      "date": "2026-08",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Classement Gartner SASE 2026",
+        "en": "Gartner SASE 2026 ranking"
+      },
+      "source": "SDxCentral",
+      "url": "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/",
+      "appris": {
+        "fr": "Netskope, Cato Networks, Palo Alto Networks et Zscaler sont « Leaders », Fortinet et Cisco « Challengers », et SonicWall figure parmi les mentions honorables. Le marché dépasserait 18 milliards de dollars en 2026.",
+        "en": "Netskope, Cato Networks, Palo Alto Networks and Zscaler are Leaders, Fortinet and Cisco are Challengers, and SonicWall is an honourable mention. The market would exceed 18 billion dollars in 2026."
+      },
+      "interet": {
+        "fr": "Cela situe SonicWall, que j'utilise en stage, face aux autres éditeurs.",
+        "en": "It shows where SonicWall, which I use during my internship, stands against other vendors."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    },
+    {
+      "date": "2026-07",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Zabbix 8.0 et les agents IA",
+        "en": "Zabbix 8.0 and AI agents"
+      },
+      "source": "Everywan",
+      "url": "https://everywan.com/en/blog/zabbix-8-0-what-actually-changes",
+      "appris": {
+        "fr": "La feuille de route de Zabbix 8.0 prévoit un serveur MCP pour que des agents IA interrogent les données de supervision, ainsi que la prise en charge d'OpenTelemetry.",
+        "en": "The Zabbix 8.0 roadmap includes an MCP server so AI agents can query monitoring data, along with OpenTelemetry support."
+      },
+      "interet": {
+        "fr": "Un assistant IA pourrait demander directement l'état du réseau à Zabbix.",
+        "en": "An AI assistant could ask Zabbix directly for the state of the network."
+      },
+      "action": {
+        "fr": "Suivre la sortie de la version finale",
+        "en": "Follow the final release"
+      }
+    },
+    {
+      "date": "2026-06",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Cisco AgenticOps et Cloud Control",
+        "en": "Cisco AgenticOps and Cloud Control"
+      },
+      "source": "BizTech Magazine",
+      "url": "https://biztechmagazine.com/article/2026/06/cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks",
+      "appris": {
+        "fr": "Cisco Cloud Control regroupe réseau, sécurité et observabilité. Chaque recommandation de l'IA est justifiée et les changements sont simulés sur un jumeau numérique avant la production.",
+        "en": "Cisco Cloud Control brings networking, security and observability together. Every AI recommendation is explained and changes are simulated on a digital twin before production."
+      },
+      "interet": {
+        "fr": "Tester un changement avant de l'appliquer limite les coupures, avec ou sans IA.",
+        "en": "Testing a change before applying it limits outages, with or without AI."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    },
+    {
+      "date": "2026-03-17",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Référentiel Cyber France (ReCyF)",
+        "en": "French Cyber Framework (ReCyF)"
+      },
+      "source": "Legiscope",
+      "url": "https://www.legiscope.com/blog/transposition-nis2-france.html",
+      "appris": {
+        "fr": "L'ANSSI a publié le ReCyF, un document de travail qui décrit les mesures de sécurité attendues, et propose un préenregistrement en ligne.",
+        "en": "ANSSI published ReCyF, a working document describing the expected security measures, and offers online pre-registration."
+      },
+      "interet": {
+        "fr": "C'est la liste concrète des mesures à mettre en place, utile pour fixer les priorités.",
+        "en": "It is the concrete list of measures to put in place, useful to set priorities."
+      },
+      "action": {
+        "fr": "Lire le ReCyF",
+        "en": "Read ReCyF"
+      }
+    },
+    {
+      "date": "2026",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Le SD-WAN s'achète en offre SASE",
+        "en": "SD-WAN is now bought as SASE"
+      },
+      "source": "Fierce Network",
+      "url": "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape",
+      "appris": {
+        "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022.",
+        "en": "Gartner expected 60% of new SD-WAN purchases in 2026 to be part of a single-vendor SASE offer, up from 15% in 2022."
+      },
+      "interet": {
+        "fr": "Réseau et sécurité s'achètent de plus en plus ensemble : il faut connaître les deux.",
+        "en": "Networking and security are increasingly bought together: you need to know both."
+      },
+      "action": {
+        "fr": "Approfondir le SASE",
+        "en": "Learn more about SASE"
+      }
+    },
+    {
+      "date": "2025-07-02",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "HPE rachète Juniper Networks",
+        "en": "HPE acquires Juniper Networks"
+      },
+      "source": "SiliconANGLE",
+      "url": "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/",
+      "appris": {
+        "fr": "HPE a finalisé le rachat de Juniper pour environ 14 milliards de dollars, réunissant son SD-WAN EdgeConnect et l'IA réseau Mist.",
+        "en": "HPE completed its acquisition of Juniper for about 14 billion dollars, combining its EdgeConnect SD-WAN with Mist network AI."
+      },
+      "interet": {
+        "fr": "Le marché se concentre autour de quelques grands acteurs, ce qui réduit le choix.",
+        "en": "The market is consolidating around a few large vendors, which narrows the choice."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Retard de la transposition française",
+        "en": "France's late transposition"
+      },
+      "source": "Haxoris",
+      "url": "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+      "appris": {
+        "fr": "L'Union européenne fixait la transposition au 17 octobre 2024. En France, le projet de loi adopté par le Sénat le 12 mars 2025 n'est toujours pas définitivement voté.",
+        "en": "The EU set the transposition deadline at 17 October 2024. In France, the bill passed by the Senate on 12 March 2025 has still not been finally adopted."
+      },
+      "interet": {
+        "fr": "Ce retard explique pourquoi les dates de mise en conformité restent floues.",
+        "en": "This delay explains why compliance dates remain unclear."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    }
+  ]
 }

@@ -1,0 +1,17 @@
+<!-- Bloc « Veille informatique » : code à coller UNE SEULE FOIS dans Odoo (bloc « Code intégré » / Embed Code),
+     à la place de l'ancien bloc. Le contenu et l'apparence viennent ensuite du dépôt GitHub
+     titouandmg-design/portfolio-veille (bloc/veille.js et veille.json) : plus besoin de retoucher Odoo. -->
+<div id="veille-titouan"><p>Chargement de la veille…</p></div>
+<script>
+(function () {
+  var src = "https://raw.githubusercontent.com/titouandmg-design/portfolio-veille/main/bloc/veille.js";
+  fetch(src, { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (code) { var s = document.createElement("script"); s.textContent = code; document.body.appendChild(s); })
+    .catch(function () {
+      document.getElementById("veille-titouan").innerHTML =
+        '<p>La veille ne peut pas être chargée pour le moment. ' +
+        '<a href="https://github.com/titouandmg-design/portfolio-veille" target="_blank" rel="noopener">Voir sur GitHub</a></p>';
+    });
+})();
+</script>
