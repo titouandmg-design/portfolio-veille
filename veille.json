@@ -1,10 +1,23 @@
 {
   "version": 2,
-  "updated": "2026-10-27",
+  "updated": "2026-11-02",
   "themes": {
     "aiops": {
       "name": "AIOps",
       "news": [
+        {
+          "date": "2026-10-29",
+          "title": {
+            "fr": "Zabbix 8.0 publie sa troisième version candidate et renforce la gestion des données",
+            "en": "Zabbix 8.0 ships its third release candidate and enhances data management"
+          },
+          "text": {
+            "fr": "Le 29 octobre 2026, Zabbix a publié la version candidate 8.0.0rc3. Cette mise à jour supprime l'accès public aux méthodes hostinterface (sauf get) pour renforcer la sécurité, ajoute le support des clusters ClickHouse et étend la compatibilité d'Elasticsearch aux versions 8.x et 9.x. La longueur maximale des données opérationnelles des déclencheurs est également portée à 2 048 caractères.",
+            "en": "On 29 October 2026, Zabbix released 8.0.0rc3. This update removes public access from all hostinterface methods except get to harden security, adds support for ClickHouse clusters, and extends Elasticsearch compatibility to versions 8.x and 9.x. The maximum length of trigger operational data has also been increased to 2,048 characters."
+          },
+          "source": "Zabbix (notes de version officielles)",
+          "url": "https://www.zabbix.com/rn/rn8.0.0rc3"
+        },
         {
           "date": "2026-10-21",
           "title": {
@@ -72,6 +85,47 @@
         }
       ],
       "reports": [
+        {
+          "date": "2026-11-02",
+          "title": {
+            "fr": "Zabbix 8.0.0rc3 : vers une version finale centrée sur la sécurité et la scalabilité des données",
+            "en": "Zabbix 8.0.0rc3: moving towards a final release focused on security and data scalability"
+          },
+          "summary": {
+            "fr": "Le 29 octobre 2026, Zabbix a franchi une nouvelle étape vers sa version LTS avec la sortie de la RC3. Cette version consolide les apports majeurs de la RC1 et RC2 (OpenTelemetry, ClickHouse, modèles IA) tout en apportant des corrections critiques de sécurité. Le retrait de l'accès public aux méthodes hostinterface, hormis la méthode get, confirme la volonté de l'éditeur de réduire la surface d'attaque de l'API, un point déjà soulevé lors de la RC2.\\n\\nParallèlement, Zabbix optimise sa capacité de traitement des données massives. L'ajout du support des clusters ClickHouse et l'extension de la compatibilité Elasticsearch (versions 8.x et 9.x) montrent que l'outil se positionne désormais comme une véritable plateforme d'observabilité capable de gérer des flux de données industriels, dépassant le cadre de la simple supervision réseau.",
+            "en": "On 29 October 2026, Zabbix took another step toward its LTS release with the launch of RC3. This version consolidates the major features of RC1 and RC2 (OpenTelemetry, ClickHouse, AI templates) while introducing critical security fixes. Removing public access from hostinterface methods, except for get, confirms the vendor's goal of reducing the API attack surface, a point already highlighted during RC2.\\n\\nIn parallel, Zabbix is optimizing its ability to handle massive data. The addition of ClickHouse cluster support and expanded Elasticsearch compatibility (versions 8.x and 9.x) show that the tool is now positioning itself as a true observability platform capable of managing industrial-scale data flows, moving beyond simple network monitoring."
+          },
+          "analysis": [
+            {
+              "fr": "La RC3 stabilise les fonctions de sécurité : le durcissement de l'API devient la norme pour la version 8.0.",
+              "en": "RC3 stabilizes security features: API hardening is becoming the standard for version 8.0."
+            },
+            {
+              "fr": "Le support des clusters ClickHouse permet une scalabilité horizontale nécessaire pour les très grands parcs de serveurs.",
+              "en": "ClickHouse cluster support enables the horizontal scalability needed for very large server parks."
+            },
+            {
+              "fr": "L'ouverture vers Elasticsearch 9.x montre que Zabbix anticipe les cycles de mise à jour des piles ELK.",
+              "en": "Opening up to Elasticsearch 9.x shows that Zabbix is anticipating ELK stack update cycles."
+            },
+            {
+              "fr": "L'augmentation de la taille des données opérationnelles des déclencheurs facilite le diagnostic rapide sans ouvrir chaque événement.",
+              "en": "Increasing the size of trigger operational data facilitates rapid diagnosis without opening every event."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité, la RC3 permet d'affiner les tests de migration : il faut maintenant vérifier que les scripts d'automatisation n'utilisent pas de méthodes hostinterface interdites. L'intégration ClickHouse et Elasticsearch simplifie la centralisation des logs et des métriques pour un technicien, réduisant le nombre d'outils à consulter en cas d'incident.",
+            "en": "For a local authority IT department, RC3 allows for more refined migration tests: it is now necessary to verify that automation scripts do not use forbidden hostinterface methods. ClickHouse and Elasticsearch integration simplifies the centralization of logs and metrics for a technician, reducing the number of tools to consult during an incident."
+          },
+          "opinion": {
+            "fr": "Avec la RC3, je vois que Zabbix ne se contente pas d'ajouter des fonctions IA, mais qu'il renforce sérieusement ses fondations. Pendant mon stage, j'ai remarqué que la gestion des droits d'API pouvait être complexe ; le fait que Zabbix impose désormais des restrictions par défaut est une excellente pratique. Je vais tester la RC3 sur ma VM et essayer d'importer un cluster ClickHouse pour voir si la performance de lecture s'améliore réellement sur mes dashboards.",
+            "en": "With RC3, I see that Zabbix is not just adding AI features but is seriously reinforcing its foundations. During my internship, I noticed that API rights management could be complex; the fact that Zabbix now imposes restrictions by default is an excellent practice. I will test RC3 on my VM and try to import a ClickHouse cluster to see if read performance actually improves on my dashboards."
+          },
+          "sources": [
+            "https://www.zabbix.com/rn/rn8.0.0rc3",
+            "https://www.zabbix.com/rn/rn8.0.0rc2"
+          ]
+        },
         {
           "date": "2026-10-26",
           "title": {
