@@ -1,10 +1,23 @@
 {
   "version": 2,
-  "updated": "2026-11-02",
+  "updated": "2026-11-16",
   "themes": {
     "aiops": {
       "name": "AIOps",
       "news": [
+        {
+          "date": "2026-11-05",
+          "title": {
+            "fr": "Zabbix 8.0.0 sort enfin : la version LTS apporte l'APM, le serveur MCP pour les agents IA et d'autres améliorations majeures",
+            "en": "Zabbix 8.0.0 finally released: LTS brings APM, MCP server for AI agents and other major improvements"
+          },
+          "text": {
+            "fr": "Le 5 novembre 2026, Zabbix a publié la version finale 8.0.0, sa prochaine version à support long (LTS). Cette sortie finalise les apports de la RC3 (sécurité API, ClickHouse clusters, Elasticsearch 8.x/9.x) et ajoute l'application performance monitoring (APM) avec collecte d'OTLP dans ClickHouse, le serveur officiel MCP pour connecter des agents IA, un nouveau type d'élément Telemetry query et bien plus. La version apporte aussi de nouvelles fonctionnalités comme la gestion des clusters PostgreSQL, une optimisation de l'historique Elasticsearch et de nouvelles fonctionnalités d'affichage.",
+            "en": "On 5 November 2026, Zabbix released final version 8.0.0, its next LTS release. This release consolidates RC3 security fixes (API hardening, ClickHouse clusters, Elasticsearch 8.x/9.x) and adds application performance monitoring (APM) with OTLP data collection into ClickHouse, an official MCP server to connect AI agents, a new Telemetry query item type and more. The release also brings PostgreSQL cluster support, optimized Elasticsearch history storage and new display features."
+          },
+          "source": "Zabbix (release notes)",
+          "url": "https://www.zabbix.com/rn/rn8.0.0"
+        },
         {
           "date": "2026-10-29",
           "title": {
@@ -86,44 +99,40 @@
       ],
       "reports": [
         {
-          "date": "2026-11-02",
+          "date": "2026-11-16",
           "title": {
-            "fr": "Zabbix 8.0.0rc3 : vers une version finale centrée sur la sécurité et la scalabilité des données",
-            "en": "Zabbix 8.0.0rc3: moving towards a final release focused on security and data scalability"
+            "fr": "Zabbix 8.0 LTS : l'APM et le MCP server font de Zabbix une plateforme d'observabilité complète",
+            "en": "Zabbix 8.0 LTS: APM and MCP server make Zabbix a complete observability platform"
           },
           "summary": {
-            "fr": "Le 29 octobre 2026, Zabbix a franchi une nouvelle étape vers sa version LTS avec la sortie de la RC3. Cette version consolide les apports majeurs de la RC1 et RC2 (OpenTelemetry, ClickHouse, modèles IA) tout en apportant des corrections critiques de sécurité. Le retrait de l'accès public aux méthodes hostinterface, hormis la méthode get, confirme la volonté de l'éditeur de réduire la surface d'attaque de l'API, un point déjà soulevé lors de la RC2.\n\nParallèlement, Zabbix optimise sa capacité de traitement des données massives. L'ajout du support des clusters ClickHouse et l'extension de la compatibilité Elasticsearch (versions 8.x et 9.x) montrent que l'outil se positionne désormais comme une véritable plateforme d'observabilité capable de gérer des flux de données industriels, dépassant le cadre de la simple supervision réseau.",
-            "en": "On 29 October 2026, Zabbix took another step toward its LTS release with the launch of RC3. This version consolidates the major features of RC1 and RC2 (OpenTelemetry, ClickHouse, AI templates) while introducing critical security fixes. Removing public access from hostinterface methods, except for get, confirms the vendor's goal of reducing the API attack surface, a point already highlighted during RC2.\n\nIn parallel, Zabbix is optimizing its ability to handle massive data. The addition of ClickHouse cluster support and expanded Elasticsearch compatibility (versions 8.x and 9.x) show that the tool is now positioning itself as a true observability platform capable of managing industrial-scale data flows, moving beyond simple network monitoring."
+            "fr": "Le 5 novembre 2026, Zabbix sort sa version finale 8.0.0, la prochaine version à support long (LTS). Cette sortie finalise les apports de la RC3 (durcissement de l'API, ClickHouse clusters, Elasticsearch 8.x/9.x) et ajoute l'application performance monitoring (APM) avec collecte OpenTelemetry dans ClickHouse, le serveur officiel MCP pour connecter des agents IA, et un nouveau type d'élément Telemetry query. La version apporte aussi une gestion des clusters PostgreSQL, l'optimisation du stockage Elasticsearch et de nouvelles fonctionnalités d'affichage.",
+            "en": "On 5 November 2026 Zabbix released its final version 8.0.0, the next LTS release. This release consolidates RC3 security hardening (API hardening, ClickHouse clusters, Elasticsearch 8.x/9.x) and adds application performance monitoring (APM) with OpenTelemetry data collection into ClickHouse, an official MCP server to connect AI agents, and a new Telemetry query item type. The release also brings PostgreSQL cluster management, optimized Elasticsearch storage and new display features."
           },
           "analysis": [
             {
-              "fr": "La RC3 stabilise les fonctions de sécurité : le durcissement de l'API devient la norme pour la version 8.0.",
-              "en": "RC3 stabilizes security features: API hardening is becoming the standard for version 8.0."
+              "fr": "Zabbix 8.0.0 finalise les nouveautés de la RC3 : le serveur MCP officiel permet à des agents IA d'interroger la supervision directement, et l'MCP utilise l'API avec gestion fine des permissions.",
+              "en": "Zabbix 8.0.0 consolidates RC3 features: the official MCP server allows AI agents to query monitoring directly, and MCP uses the API with fine-grained permission management."
             },
             {
-              "fr": "Le support des clusters ClickHouse permet une scalabilité horizontale nécessaire pour les très grands parcs de serveurs.",
-              "en": "ClickHouse cluster support enables the horizontal scalability needed for very large server parks."
+              "fr": "L'APM avec collecte OpenTelemetry (OTLP) transforme Zabbix en plateforme d'observabilité complète : métriques, logs et traces depuis un seul outil, avec filtrage des attributs de ressource.",
+              "en": "APM with OpenTelemetry data collection transforms Zabbix into a complete observability platform: metrics, logs and traces from a single tool, with resource attribute filtering."
             },
             {
-              "fr": "L'ouverture vers Elasticsearch 9.x montre que Zabbix anticipe les cycles de mise à jour des piles ELK.",
-              "en": "Opening up to Elasticsearch 9.x shows that Zabbix is anticipating ELK stack update cycles."
+              "fr": "Le stockage ClickHouse et l'affichage des traces manquantes permettent d'exploiter pleinement les données d'observabilité à grande échelle sans saturer la base de données.",
+              "en": "ClickHouse storage and missing trace visualization enable full exploitation of large-scale observability data without saturating the database."
             },
             {
-              "fr": "L'augmentation de la taille des données opérationnelles des déclencheurs facilite le diagnostic rapide sans ouvrir chaque événement.",
-              "en": "Increasing the size of trigger operational data facilitates rapid diagnosis without opening every event."
+              "fr": "La migration vers 8.0.0 se fait maintenant en toute sérénité : il n'y a plus d'équipe dédiée au suivi des RC et l'éditeur recommande de migrer avant fin d'année.",
+              "en": "Migration to 8.0.0 can now be done with complete confidence: there is no longer a dedicated RC monitoring team and the vendor recommends migrating before year-end."
             }
           ],
           "impact": {
-            "fr": "Pour une DSI de collectivité, la RC3 permet d'affiner les tests de migration : il faut maintenant vérifier que les scripts d'automatisation n'utilisent pas de méthodes hostinterface interdites. L'intégration ClickHouse et Elasticsearch simplifie la centralisation des logs et des métriques pour un technicien, réduisant le nombre d'outils à consulter en cas d'incident.",
-            "en": "For a local authority IT department, RC3 allows for more refined migration tests: it is now necessary to verify that automation scripts do not use forbidden hostinterface methods. ClickHouse and Elasticsearch integration simplifies the centralization of logs and metrics for a technician, reducing the number of tools to consult during an incident."
-          },
-          "opinion": {
-            "fr": "Avec la RC3, je vois que Zabbix ne se contente pas d'ajouter des fonctions IA, mais qu'il renforce sérieusement ses fondations. Pendant mon stage, j'ai remarqué que la gestion des droits d'API pouvait être complexe ; le fait que Zabbix impose désormais des restrictions par défaut est une excellente pratique. Je vais tester la RC3 sur ma VM et essayer d'importer un cluster ClickHouse pour voir si la performance de lecture s'améliore réellement sur mes dashboards.",
-            "en": "With RC3, I see that Zabbix is not just adding AI features but is seriously reinforcing its foundations. During my internship, I noticed that API rights management could be complex; the fact that Zabbix now imposes restrictions by default is an excellent practice. I will test RC3 on my VM and try to import a ClickHouse cluster to see if read performance actually improves on my dashboards."
+            "fr": "Pour une DSI de collectivité, 8.0.0 est l'occasion idéale de migrer : la version finale apporte toutes les fonctions attendues (APM, MCP, Telemetry query). Le serveur MCP permet d'intégrer des agents IA pour enrichir la supervision sans ajouter d'outils dédiés. Il faut vérifier que les scripts API sont bien autorisés dans le nouveau modèle de sécurité.",
+            "en": "For a local authority IT department, 8.0.0 is the ideal time to migrate: the final release brings all expected features (APM, MCP, Telemetry query). The MCP server allows integrating AI agents to enrich monitoring without adding dedicated tools. It is necessary to verify that API scripts are properly allowed under the new security model."
           },
           "sources": [
-            "https://www.zabbix.com/rn/rn8.0.0rc3",
-            "https://www.zabbix.com/rn/rn8.0.0rc2"
+            "https://www.zabbix.com/rn/rn8.0.0",
+            "https://blog.zabbix.com/whats-new-in-zabbix-8-0-lts/33755"
           ]
         },
         {
@@ -561,6 +570,28 @@
     }
   },
   "boite": [
+    {
+      "date": "2026-11-05",
+      "theme": "aiops",
+      "sujet": {
+        "fr": "Zabbix 8.0.0 sort enfin avec APM et serveur MCP",
+        "en": "Zabbix 8.0.0 finally released with APM and MCP server"
+      },
+      "source": "Zabbix (release notes)",
+      "url": "https://www.zabbix.com/rn/rn8.0.0",
+      "appris": {
+        "fr": "La version finale 8.0.0 apporte l'APM avec collecte OTLP dans ClickHouse, un serveur MCP officiel pour connecter des agents IA, et le nouveau type d'élément Telemetry query.",
+        "en": "Final release 8.0.0 brings APM with OTLP collection into ClickHouse, an official MCP server to connect AI agents, and a new Telemetry query item type."
+      },
+      "interet": {
+        "fr": "Zabbix devient une plateforme d'APM capable de gérer l'observabilité complète : métriques, logs et traces depuis un seul outil.",
+        "en": "Zabbix becomes an APM platform capable of handling full observability: metrics, logs and traces from a single tool."
+      },
+      "action": {
+        "fr": "Planifier la migration vers 8.0.0 sur une maquette avant fin d'année",
+        "en": "Plan the migration to 8.0.0 on a lab setup before year-end"
+      }
+    },
     {
       "date": "2026-10-29",
       "theme": "aiops",
