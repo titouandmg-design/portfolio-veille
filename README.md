@@ -1,7 +1,7 @@
 # Veille informatique — données du portfolio
 
 Ce dépôt contient `veille.json`, le fichier lu par le bloc « Veille informatique » du portfolio de Titouan Dumange (site Odoo).
-Il est mis à jour automatiquement chaque lundi. Pour chaque thème (AIOps, NIS 2, SD-WAN), il contient un compte rendu de veille (synthèse, analyse, impacts) et les actualités sourcées qui l'appuient, en français et en anglais. Les comptes rendus précédents sont conservés et consultables sur le site. Il contient aussi la **boîte à veille**, la base de connaissances personnelle affichée en tableau sous les thèmes.
+Il est mis à jour automatiquement chaque lundi. Pour chaque thème (AIOps, Zero Trust, Conteneurs & Kubernetes), il contient un compte rendu de veille (synthèse, analyse, impacts) et les actualités sourcées qui l'appuient, en français et en anglais. Les comptes rendus précédents sont conservés et consultables sur le site. Il contient aussi la **boîte à veille**, la base de connaissances personnelle affichée en tableau sous les thèmes.
 
 Le bloc lit ce fichier à l'adresse :
 `https://raw.githubusercontent.com/titouandmg-design/portfolio-veille/main/veille.json`
@@ -13,13 +13,15 @@ Le bloc lit ce fichier à l'adresse :
   "version": 2,
   "updated": "AAAA-MM-JJ",
   "themes": {
-    "aiops": { "name": "AIOps",  "reports": [ … ], "news": [ … ] },
-    "nis2":  { "name": "NIS 2",  "reports": [ … ], "news": [ … ] },
-    "sdwan": { "name": "SD-WAN", "reports": [ … ], "news": [ … ] }
+    "aiops":      { "name": "AIOps",      "reports": [ … ], "news": [ … ] },
+    "zerotrust":  { "name": "Zero Trust", "reports": [ … ], "news": [ … ] },
+    "kubernetes": { "name": { "fr": "Conteneurs & Kubernetes", "en": "Containers & Kubernetes" }, "reports": [ … ], "news": [ … ] }
   },
   "boite": [ … ]
 }
 ```
+
+Le `name` d'un thème est une simple chaîne ou un objet `{ "fr", "en" }`.
 
 Chaque compte rendu (`reports`, le plus récent en premier) :
 
@@ -50,7 +52,7 @@ Chaque entrée de la boîte à veille (`boite`, la plus récente en premier) :
 | Champ     | Contenu |
 |-----------|---------|
 | `date`    | `AAAA-MM-JJ` (ou `AAAA-MM`, `AAAA`) |
-| `theme`   | `aiops`, `nis2` ou `sdwan` |
+| `theme`   | `aiops`, `zerotrust` ou `kubernetes` |
 | `sujet`   | `{ "fr", "en" }`, le sujet en quelques mots |
 | `source`  | nom du média |
 | `url`     | lien `https://` vers la source |
@@ -61,3 +63,7 @@ Chaque entrée de la boîte à veille (`boite`, la plus récente en premier) :
 ## Le bloc du site
 
 `bloc/veille.js` dessine la veille sur le site (onglets par thème, compte rendu, dernières actualités, boîte à veille), en français ou en anglais selon la langue de la page. Le site Odoo ne contient que le code de `bloc/odoo.html`, collé une seule fois, qui charge `bloc/veille.js` depuis ce dépôt : toute modification de `bloc/veille.js` ou de `veille.json` apparaît sur le site quelques minutes après le push. Si le chargement échoue, le bloc affiche un lien vers ce dépôt.
+
+## Archive
+
+Les thèmes retirés (NIS 2 et SD-WAN, le 17 novembre 2026) sont conservés dans `archive/veille-nis2-sdwan-2026-11-16.json`. Le site et `validate.py` ne lisent pas ce dossier.

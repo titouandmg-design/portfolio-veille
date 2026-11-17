@@ -155,7 +155,7 @@
     "@media (prefers-reduced-motion:reduce){" + S + " *{transition:none!important}}"
   ].join("");
 
-  var THEME_BADGE = { aiops: "td-bloc--1", nis2: "td-bloc--2", sdwan: "td-bloc--3" };
+  var THEME_BADGE = { aiops: "td-bloc--1", zerotrust: "td-bloc--2", kubernetes: "td-bloc--3" };
 
   function el(tag, attrs, children) {
     var n = document.createElement(tag);
@@ -272,7 +272,7 @@
     var entries = (data.boite || []).slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
     if (!entries.length) return;
     var names = {};
-    Object.keys(data.themes || {}).forEach(function (k) { names[k] = data.themes[k].name || k; });
+    Object.keys(data.themes || {}).forEach(function (k) { names[k] = tr(data.themes[k].name) || k; });
     var section = el("section", { class: "vl-box", "aria-labelledby": "vl-box-title" });
     section.appendChild(el("h3", { id: "vl-box-title", text: T.box }));
     section.appendChild(el("p", { text: T.boxIntro }));
@@ -343,7 +343,7 @@
     var panel = el("div", { role: "tabpanel", id: "vl-panel" });
     keys.forEach(function (k, i) {
       var b = el("button", { type: "button", class: "vl-tab", role: "tab", id: "vl-tab-" + k, "aria-controls": "vl-panel",
-                             "aria-selected": i === 0 ? "true" : "false", text: data.themes[k].name || k });
+                             "aria-selected": i === 0 ? "true" : "false", text: tr(data.themes[k].name) || k });
       b.addEventListener("click", function () {
         Array.prototype.forEach.call(tabs.children, function (c) { c.setAttribute("aria-selected", c === b ? "true" : "false"); });
         panel.setAttribute("aria-labelledby", b.id);

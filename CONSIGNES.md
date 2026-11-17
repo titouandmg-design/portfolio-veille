@@ -4,8 +4,10 @@ Lu par la tâche planifiée chaque lundi. Objectif : garder `veille.json` à jou
 
 ## Thèmes
 - `aiops` : IA appliquée à l'exploitation et à la supervision réseau (AIOps, AgenticOps, observabilité, Zabbix, outils de NetOps).
-- `nis2` : directive NIS 2 et sa transposition en France (projet de loi Résilience, ANSSI, ReCyF, décrets, collectivités territoriales).
-- `sdwan` : SD-WAN et SASE (marché, offres, Gartner, sécurité des réseaux étendus, SonicWall, Fortinet, Cisco, etc.).
+- `zerotrust` : Zero Trust (identité et droits minimaux, ZTNA et SASE, segmentation, guides du NIST, de la CISA et de l'ANSSI, Zero Trust appliqué à l'IA et aux systèmes industriels).
+- `kubernetes` : conteneurs et Kubernetes (versions et dépréciations, failles et avis de sécurité, Gateway API, écosystème CNCF, machines virtuelles et IA sur Kubernetes).
+
+Les anciens thèmes NIS 2 et SD-WAN ont été retirés le 17 novembre 2026 : leur contenu est conservé dans `archive/veille-nis2-sdwan-2026-11-16.json`, que le site et `validate.py` ne lisent pas. Le champ `name` d'un thème peut être une simple chaîne ou un objet `{ "fr", "en" }`.
 
 ## Ce qui est publié
 Pour chaque thème, le site affiche un **compte rendu** (le plus récent, avec un menu pour relire les précédents) et les **3 dernières actualités** qui lui servent de sources. Le compte rendu est la partie principale : il doit se lire comme une vraie synthèse de veille, pas comme une liste de liens.
@@ -16,12 +18,12 @@ Le site n'affiche plus « Mon point de vue » : ne rédige plus le champ `opinio
 
 ## Procédure
 1. Lire `veille.json`. Noter `updated` et les URL déjà présentes.
-2. Pour chaque thème, chercher sur le web les actualités publiées depuis `updated` (ou les 4 dernières semaines si rien de neuf). Privilégier : cyber.gouv.fr / ANSSI, CERT-FR, Légifrance, assemblee-nationale.fr, Next, LeMagIT, Silicon.fr, IT-Connect, ZDNet, Le Monde Informatique, communiqués officiels des éditeurs, SDxCentral, Network World.
+2. Pour chaque thème, chercher sur le web les actualités publiées depuis `updated` (ou les 4 dernières semaines si rien de neuf). Privilégier : cyber.gouv.fr / ANSSI, CERT-FR, NIST (nist.gov, csrc.nist.gov), CISA, kubernetes.io (blog et avis de sécurité), CNCF, blogs officiels des éditeurs (Microsoft Security, Zabbix…), Next, LeMagIT, Silicon.fr, IT-Connect, ZDNet, Le Monde Informatique, Network World.
 3. Ne retenir une actualité que si : elle est vraiment nouvelle (pas déjà dans le fichier), datée, pertinente pour un technicien systèmes et réseaux, et confirmée par une deuxième source ou issue d'une source officielle. Ouvrir l'article pour vérifier les chiffres. Ne jamais inventer de chiffre, de date ou de citation.
 4. Ajouter de 0 à 2 actualités par thème, en tête de la liste `news`, au format existant : `date` (AAAA-MM-JJ de publication), `title` {fr, en}, `text` {fr, en} (2 à 3 phrases factuelles, ton neutre, typographie française avec espaces avant : ; ? !), `source` (nom du média), `url` (https, l'article lui-même).
 4 bis. Pour chaque actualité ajoutée, ajoute aussi une entrée en tête de la liste `boite` :
-   - `date` : la même que l'actualité ; `theme` : `aiops`, `nis2` ou `sdwan` ;
-   - `sujet` {fr, en} : le sujet en quelques mots (8 mots au plus), comme « Zabbix 8.0 RC3 » ou « Faille critique Cisco SD-WAN » ;
+   - `date` : la même que l'actualité ; `theme` : `aiops`, `zerotrust` ou `kubernetes` ;
+   - `sujet` {fr, en} : le sujet en quelques mots (8 mots au plus), comme « Zabbix 8.0 RC3 » ou « Faille CVE-2026-4342 d'ingress-nginx » ;
    - `source` : nom du média ; `url` : la même URL que l'actualité ;
    - `appris` {fr, en} : ce que l'on apprend, en une ou deux phrases factuelles tirées de l'article ;
    - `interet` {fr, en} : pourquoi c'est intéressant pour un technicien systèmes et réseaux ou une DSI de collectivité, en une phrase ;

@@ -5,7 +5,7 @@ d = json.load(open('veille.json', encoding='utf-8'))
 err = []
 if d.get('version') not in (1, 2): err.append('version doit valoir 2')
 if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', d.get('updated', '')): err.append('updated doit être AAAA-MM-JJ')
-for key in ('aiops', 'nis2', 'sdwan'):
+for key in ('aiops', 'zerotrust', 'kubernetes'):
     t = d.get('themes', {}).get(key)
     if not t or not isinstance(t.get('news'), list) or len(t['news']) < 3:
         err.append(f'{key} : au moins 3 actualités requises'); continue
@@ -53,7 +53,7 @@ for i, b in enumerate(boite):
     w = f'boite[{i}]'
     if not re.fullmatch(r'\d{4}(-\d{2}(-\d{2})?)?', b.get('date', '')): err.append(f'{w} : date invalide')
     elif b['date'] > d.get('updated', ''): err.append(f'{w} : date dans le futur')
-    if b.get('theme') not in d.get('themes', {}): err.append(f'{w} : theme doit être aiops, nis2 ou sdwan')
+    if b.get('theme') not in d.get('themes', {}): err.append(f'{w} : theme doit être aiops, zerotrust ou kubernetes')
     for f in ('sujet', 'appris', 'interet', 'action'):
         val = b.get(f)
         if not (isinstance(val, dict) and val.get('fr', '').strip() and val.get('en', '').strip()): err.append(f'{w} : {f} doit avoir fr et en')

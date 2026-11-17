@@ -1,0 +1,484 @@
+{
+  "note": "Thèmes NIS 2 et SD-WAN retirés de veille.json le 2026-11-17 (remplacés par Zero Trust et Conteneurs & Kubernetes). Contenu conservé tel quel ; ce fichier n'est ni lu par le site ni contrôlé par validate.py.",
+  "archived": "2026-11-17",
+  "themes": {
+    "nis2": {
+      "name": "NIS 2",
+      "news": [
+        {
+          "date": "2026-10-08",
+          "title": {
+            "fr": "L'ANSSI envisage une conformité complète à NIS 2 fin 2028",
+            "en": "ANSSI considers full NIS 2 compliance by the end of 2028"
+          },
+          "text": {
+            "fr": "Entendu le 1er octobre 2026 par la commission spéciale de l'Assemblée nationale, le directeur général de l'ANSSI, Vincent Strubel, a proposé de fixer à fin 2028 l'échéance de conformité complète pour toutes les entités, au lieu d'un délai de trois ans après la loi. Il a appelé à ne pas « surtransposer » la directive et a indiqué que des exercices à blanc précéderaient les contrôles.",
+            "en": "Heard on 1 October 2026 by the National Assembly's special committee, ANSSI director general Vincent Strubel proposed setting the end of 2028 as the full-compliance deadline for all entities, instead of a three-year period after the law. He urged lawmakers not to \"over-transpose\" the directive and said trial exercises would come before inspections."
+          },
+          "source": "Silicon.fr",
+          "url": "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563"
+        },
+        {
+          "date": "2026-10-06",
+          "title": {
+            "fr": "Nouveau report à l'Assemblée nationale",
+            "en": "Another delay at the National Assembly"
+          },
+          "text": {
+            "fr": "L'examen du projet de loi Résilience, prévu les 7 et 9 octobre, est retiré de l'ordre du jour faute de place. Le rapporteur Éric Bothorel espère une réinscription « d'ici quinze jours ou trois semaines ».",
+            "en": "The debate on the Resilience bill, planned for 7 and 9 October, is pulled from the agenda for lack of time. Rapporteur Éric Bothorel hopes it will be rescheduled \"within two or three weeks\"."
+          },
+          "source": "Next",
+          "url": "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/"
+        },
+        {
+          "date": "2026-03-17",
+          "title": {
+            "fr": "L'ANSSI publie le Référentiel Cyber France (ReCyF)",
+            "en": "ANSSI publishes the French Cyber Framework (ReCyF)"
+          },
+          "text": {
+            "fr": "Ce document de travail décrit les mesures de sécurité qui seront attendues des entités concernées. L'ANSSI propose aussi un préenregistrement en ligne pour se préparer avant le vote de la loi.",
+            "en": "This working document describes the security measures that will be expected of covered entities. ANSSI also offers online pre-registration so organisations can prepare before the law is passed."
+          },
+          "source": "Legiscope",
+          "url": "https://www.legiscope.com/blog/transposition-nis2-france.html"
+        },
+        {
+          "date": "2024-10-17",
+          "title": {
+            "fr": "Près de deux ans de retard pour la France",
+            "en": "France is almost two years late"
+          },
+          "text": {
+            "fr": "L'Union européenne fixait la transposition au 17 octobre 2024. Le projet de loi a été adopté par le Sénat le 12 mars 2025 puis examiné en commission à l'Assemblée le 10 septembre 2025 ; il n'est toujours pas définitivement voté.",
+            "en": "The EU set the transposition deadline at 17 October 2024. The bill was passed by the Senate on 12 March 2025 and reviewed in committee at the Assembly on 10 September 2025; it has still not been finally adopted."
+          },
+          "source": "Haxoris",
+          "url": "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+          "label": {
+            "fr": "Depuis le 17 octobre 2024",
+            "en": "Since 17 October 2024"
+          }
+        }
+      ],
+      "reports": [
+        {
+          "date": "2026-10-19",
+          "title": {
+            "fr": "Sans loi votée, l'ANSSI fixe déjà un horizon : une conformité complète à NIS 2 fin 2028",
+            "en": "With no law passed, ANSSI already sets a horizon: full NIS 2 compliance by the end of 2028"
+          },
+          "summary": {
+            "fr": "Le 17 octobre 2026, la France a atteint deux ans de retard dans la transposition de NIS 2. Le projet de loi Résilience, retiré le 6 octobre de l'ordre du jour de l'Assemblée nationale, n'avait toujours pas de nouvelle date d'examen le 13 octobre, alors que la Commission européenne a saisi la Cour de justice de l'Union européenne contre la France en juillet 2026.\n\nLe calendrier d'application, lui, se précise. Auditionné le 1er octobre par la commission spéciale, Vincent Strubel, directeur général de l'ANSSI, a proposé de viser une conformité complète de toutes les entités fin 2028, au lieu d'un délai de trois ans après le vote. Il a demandé de ne pas « surtransposer » la directive et annoncé des exercices à blanc avant les contrôles. L'ANSSI compte 670 équivalents temps plein pour passer de quelques centaines à environ 15 000 entités régulées, dans 18 secteurs au lieu de 6.",
+            "en": "On 17 October 2026 France reached two years of delay in transposing NIS 2. The Resilience bill, withdrawn from the National Assembly's agenda on 6 October, still had no new examination date on 13 October, while the European Commission referred France to the Court of Justice of the European Union in July 2026.\n\nThe enforcement timeline, however, is becoming clearer. Heard on 1 October by the special committee, ANSSI director general Vincent Strubel proposed aiming for full compliance of all entities by the end of 2028, instead of a three-year period after the vote. He asked lawmakers not to \"over-transpose\" the directive and announced trial exercises before inspections. ANSSI has 670 full-time equivalents to go from a few hundred to around 15,000 regulated entities, in 18 sectors instead of 6."
+          },
+          "analysis": [
+            {
+              "fr": "Une échéance fixe à fin 2028 donne aux organisations une date de référence qui ne dépend plus du jour du vote, ce qui facilite la planification budgétaire.",
+              "en": "A fixed end-2028 deadline gives organisations a reference date that no longer depends on when the law is voted, which makes budget planning easier."
+            },
+            {
+              "fr": "Le retard parlementaire réduit d'autant le temps de préparation réel : Vincent Strubel a lui-même souligné que les reports pèsent sur les arbitrages budgétaires des entités.",
+              "en": "The parliamentary delay shrinks the real preparation time accordingly: Vincent Strubel himself stressed that postponements weigh on entities' budget decisions."
+            },
+            {
+              "fr": "L'approche annoncée est progressive : exercices à blanc avant les contrôles et refus de la surtransposition, ce qui privilégie l'accompagnement à la sanction dans un premier temps.",
+              "en": "The announced approach is gradual: trial exercises before inspections and no over-transposition, favouring support over sanctions at first."
+            },
+            {
+              "fr": "Les moyens de l'ANSSI restent un point de tension : 670 équivalents temps plein, contre environ 1 800 à 2 000 agents pour le BSI allemand selon son directeur.",
+              "en": "ANSSI's resources remain a pressure point: 670 full-time equivalents, compared with about 1,800 to 2,000 staff at Germany's BSI according to its director."
+            },
+            {
+              "fr": "Les actions imposées aux ministères d'ici le 31 décembre 2026 (authentification multifacteur des administrateurs, EDR ou XDR sur les postes et serveurs, procédures de correctifs, remplacement des composants obsolètes) donnent un aperçu concret des mesures attendues.",
+              "en": "The actions required of ministries by 31 December 2026 (multi-factor authentication for administrators, EDR or XDR on workstations and servers, patching procedures, replacement of obsolete components) offer a concrete preview of the expected measures."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une collectivité comme les Sables d'Olonne, la date de fin 2028 sert de cible : il reste environ deux ans pour aligner les pratiques sur le ReCyF. La liste des actions demandées à l'État est un bon point de départ pour un plan d'action local : authentification multifacteur pour les comptes administrateurs de l'Active Directory, procédure de correctifs écrite, inventaire des équipements obsolètes et journalisation suffisante. Pour le technicien, cela signifie documenter et prouver ce qui est fait, pas seulement le faire.",
+            "en": "For a local authority such as Les Sables d'Olonne, the end-2028 date works as a target: about two years remain to align practices with ReCyF. The list of actions required of the State is a good starting point for a local action plan: multi-factor authentication for Active Directory administrator accounts, a written patching procedure, an inventory of obsolete equipment and sufficient logging. For the technician, this means documenting and proving what is done, not just doing it."
+          },
+          "opinion": {
+            "fr": "Ce qui me marque cette semaine, c'est que l'ANSSI avance sans attendre la loi. Les mesures citées pour les ministères, comme l'authentification multifacteur des administrateurs ou une procédure de correctifs, correspondent à des sujets que j'ai rencontrés en stage sur l'Active Directory et les pare-feu SonicWall. Je vais suivre la réinscription du texte à l'Assemblée et voir si l'échéance de fin 2028 est inscrite dans la loi ou dans les décrets.",
+            "en": "What strikes me this week is that ANSSI is moving ahead without waiting for the law. The measures cited for ministries, such as multi-factor authentication for administrators or a patching procedure, match topics I came across during my internship on Active Directory and SonicWall firewalls. I will follow the bill's return to the Assembly agenda and see whether the end-2028 deadline ends up in the law or in the decrees."
+          },
+          "sources": [
+            "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563",
+            "https://www.leto.legal/news/anssi-nis-2-conformite-complete-fin-2028-strubel-2026",
+            "https://www.silicon.fr/cybersecurite-1371/nis2-la-loi-attend-les-attaquants-non-229628",
+            "https://www.leto.legal/news/assemblee-nationale-report-projet-loi-resilience-nis2-octobre-2026"
+          ]
+        },
+        {
+          "date": "2026-10-12",
+          "title": {
+            "fr": "NIS 2 : une transposition française toujours en attente",
+            "en": "NIS 2: France's transposition is still pending"
+          },
+          "summary": {
+            "fr": "La France n'a toujours pas transposé la directive NIS 2, alors que l'échéance européenne était fixée au 17 octobre 2024. Le projet de loi Résilience, adopté par le Sénat le 12 mars 2025, devait être débattu à l'Assemblée nationale les 7 et 9 octobre 2026. Le 6 octobre, son examen a de nouveau été reporté faute de place à l'ordre du jour ; le rapporteur Éric Bothorel espère une réinscription d'ici deux à trois semaines.\n\nEn attendant, l'ANSSI prépare les organisations. Depuis le 17 mars 2026, elle met à disposition le Référentiel Cyber France (ReCyF), un document de travail qui décrit les mesures de sécurité attendues, et propose un préenregistrement en ligne des futures entités concernées.",
+            "en": "France has still not transposed the NIS 2 directive, although the EU deadline was 17 October 2024. The Resilience bill, passed by the Senate on 12 March 2025, was due to be debated at the National Assembly on 7 and 9 October 2026. On 6 October its examination was postponed again for lack of space on the agenda; rapporteur Éric Bothorel hopes it will be rescheduled within two to three weeks.\n\nIn the meantime, ANSSI is helping organisations prepare. Since 17 March 2026 it has published the French Cyber Framework (ReCyF), a working document describing the expected security measures, and offers online pre-registration for future covered entities."
+          },
+          "analysis": [
+            {
+              "fr": "Le périmètre change d'échelle : on passe de quelques centaines d'opérateurs sous NIS 1 à environ 15 000 entités selon les estimations, classées « essentielles » ou « importantes ».",
+              "en": "The scope changes scale: from a few hundred operators under NIS 1 to around 15,000 entities according to estimates, classed as \"essential\" or \"important\"."
+            },
+            {
+              "fr": "Les obligations sont connues même sans loi française : gestion des risques, signalement des incidents (alerte sous 24 h, notification sous 72 h, rapport final sous un mois) et responsabilité des dirigeants découlent directement de la directive.",
+              "en": "The obligations are known even without a French law: risk management, incident reporting (warning within 24 h, notification within 72 h, final report within a month) and executive accountability come straight from the directive."
+            },
+            {
+              "fr": "Le retard entretient l'incertitude : les seuils, les listes de secteurs et les modalités d'enregistrement seront fixés par les décrets d'application, publiés seulement après le vote.",
+              "en": "The delay keeps uncertainty alive: thresholds, sector lists and registration procedures will be set by implementing decrees, published only after the vote."
+            },
+            {
+              "fr": "Les sanctions prévues par la directive, jusqu'à 10 M€ ou 2 % du chiffre d'affaires mondial pour une entité essentielle, poussent à anticiper plutôt qu'à attendre.",
+              "en": "The penalties set by the directive, up to €10M or 2% of worldwide turnover for an essential entity, encourage organisations to prepare rather than wait."
+            }
+          ],
+          "impact": {
+            "fr": "Les collectivités sont directement visées : le seuil envisagé pour les communes est de 30 000 habitants, mais il ne sera définitif qu'avec les décrets. Une DSI comme celle des Sables d'Olonne a intérêt à se comparer dès maintenant au ReCyF, à formaliser sa procédure de gestion des incidents et à sensibiliser les élus et la direction.",
+            "en": "Local authorities are directly targeted: the threshold being considered for municipalities is 30,000 inhabitants, though it will only be final once the decrees are out. An IT department like that of Les Sables d'Olonne would do well to benchmark itself against ReCyF now, formalise its incident management procedure and brief elected officials and management."
+          },
+          "opinion": {
+            "fr": "NIS 2 me montre que la cybersécurité n'est plus seulement une affaire technique : elle engage aussi la direction et le juridique. Des tâches que j'ai réalisées en stage, comme la supervision, la gestion des accès et la documentation, deviennent des obligations qu'il faudra pouvoir justifier. Je vais suivre le vote de la loi et la publication des décrets.",
+            "en": "NIS 2 shows me that cybersecurity is no longer just a technical matter: it also involves management and legal teams. Tasks I carried out during my internship, such as monitoring, access management and documentation, are becoming obligations that will have to be demonstrated. I will follow the vote on the bill and the publication of the decrees."
+          },
+          "sources": [
+            "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/",
+            "https://www.legiscope.com/blog/transposition-nis2-france.html",
+            "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+            "https://www.neova.tech/blog/nis2-collectivites-2026-loi-resilience-mise-en-conformite"
+          ]
+        }
+      ]
+    },
+    "sdwan": {
+      "name": "SD-WAN",
+      "news": [
+        {
+          "date": "2026-09-30",
+          "title": {
+            "fr": "Faille critique exploitée dans Cisco Catalyst SD-WAN Manager",
+            "en": "Critical exploited flaw in Cisco Catalyst SD-WAN Manager"
+          },
+          "text": {
+            "fr": "Cisco a publié le 30 septembre 2026 un avis sur la vulnérabilité CVE-2026-76504 (score CVSS 9,8) : une erreur de traitement de l'encodage des URL permet à un attaquant non authentifié d'obtenir un accès administrateur à l'API de Catalyst SD-WAN Manager. Cisco indique avoir eu connaissance d'une exploitation active en septembre ; aucun contournement n'existe et une mise à jour vers une version corrigée est nécessaire.",
+            "en": "On 30 September 2026 Cisco published an advisory on vulnerability CVE-2026-76504 (CVSS score 9.8): improper handling of URL encoding lets an unauthenticated attacker gain administrator access to the Catalyst SD-WAN Manager API. Cisco says it became aware of active exploitation in September; there is no workaround and an upgrade to a fixed release is required."
+          },
+          "source": "Cisco Security Advisory",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU"
+        },
+        {
+          "date": "2026-08",
+          "title": {
+            "fr": "Gartner publie son classement SASE 2026",
+            "en": "Gartner releases its 2026 SASE ranking"
+          },
+          "text": {
+            "fr": "Netskope, Cato Networks, Palo Alto Networks et Zscaler sont « Leaders » ; Fortinet et Cisco sont « Challengers » et SonicWall figure parmi les mentions honorables. Gartner estime que le marché du SASE dépassera 18 milliards de dollars en 2026.",
+            "en": "Netskope, Cato Networks, Palo Alto Networks and Zscaler are \"Leaders\"; Fortinet and Cisco are \"Challengers\" and SonicWall gets an honourable mention. Gartner expects the SASE market to exceed $18 billion in 2026."
+          },
+          "source": "SDxCentral",
+          "url": "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/"
+        },
+        {
+          "date": "2025-07-02",
+          "title": {
+            "fr": "HPE finalise le rachat de Juniper Networks",
+            "en": "HPE completes its acquisition of Juniper Networks"
+          },
+          "text": {
+            "fr": "Pour environ 14 milliards de dollars, HPE réunit son SD-WAN EdgeConnect et l'IA réseau Mist de Juniper. Un exemple de la consolidation du marché autour de quelques grands acteurs.",
+            "en": "For about $14 billion, HPE brings together its EdgeConnect SD-WAN and Juniper's Mist network AI, an example of the market consolidating around a few large players."
+          },
+          "source": "SiliconANGLE",
+          "url": "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/"
+        },
+        {
+          "date": "2026",
+          "title": {
+            "fr": "Le SD-WAN s'achète désormais en offre SASE",
+            "en": "SD-WAN is now bought as part of SASE"
+          },
+          "text": {
+            "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022. L'IA générative commence aussi à servir à la configuration initiale des réseaux.",
+            "en": "Gartner predicted that 60% of new SD-WAN purchases in 2026 would be part of a single-vendor SASE offer, up from 15% in 2022. Generative AI is also starting to be used for initial network configuration."
+          },
+          "source": "Fierce Network",
+          "url": "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape",
+          "label": {
+            "fr": "Tendance 2026",
+            "en": "2026 trend"
+          }
+        }
+      ],
+      "reports": [
+        {
+          "date": "2026-10-19",
+          "title": {
+            "fr": "La console centrale du SD-WAN devient une cible prioritaire des attaquants",
+            "en": "The central SD-WAN console is becoming a prime target for attackers"
+          },
+          "summary": {
+            "fr": "Le 30 septembre 2026, Cisco a publié un avis de sécurité sur la vulnérabilité CVE-2026-76504, notée 9,8 sur 10, qui touche Catalyst SD-WAN Manager quelle que soit sa configuration. Une erreur de traitement de l'encodage des URL permet à un attaquant non authentifié, à distance, d'obtenir un accès administrateur à l'API. Cisco a eu connaissance d'une exploitation active en septembre ; l'agence américaine CISA a ajouté la faille à son catalogue des vulnérabilités exploitées le jour même et a donné aux agences fédérales jusqu'au 3 octobre pour corriger. Il n'existe pas de contournement : seule la mise à jour vers une version corrigée, par exemple 20.9.10.1 ou 20.12.8.2, règle le problème.\n\nLa semaine dernière, je notais que le SD-WAN se fondait dans des plateformes SASE pilotées depuis une console unique. Cette faille montre l'envers du décor : selon SDxCentral, elle s'ajoute aux failles de ce produit signalées en février et en mai, que Cisco Talos relie au groupe UAT-8616, puis à une faille d'accès root en juin.",
+            "en": "On 30 September 2026 Cisco published a security advisory on vulnerability CVE-2026-76504, rated 9.8 out of 10, which affects Catalyst SD-WAN Manager regardless of configuration. Improper handling of URL encoding lets a remote, unauthenticated attacker gain administrator access to the API. Cisco became aware of active exploitation in September; the US agency CISA added the flaw to its catalogue of exploited vulnerabilities the same day and gave federal agencies until 3 October to fix it. There is no workaround: only upgrading to a fixed release, for example 20.9.10.1 or 20.12.8.2, solves the problem.\n\nLast week I noted that SD-WAN was merging into SASE platforms managed from a single console. This flaw shows the other side: according to SDxCentral, it adds to the flaws in this product reported in February and May, which Cisco Talos links to the UAT-8616 group, and to a root access flaw in June."
+          },
+          "analysis": [
+            {
+              "fr": "Centraliser la gestion simplifie l'exploitation, mais concentre le risque : un attaquant qui prend la console d'administration peut agir sur tous les sites reliés.",
+              "en": "Centralised management simplifies operations but concentrates risk: an attacker who takes over the management console can act on every connected site."
+            },
+            {
+              "fr": "L'exposition de la console sur Internet est le facteur aggravant : Cisco recommande d'en restreindre l'accès en attendant la mise à jour des déploiements sur site.",
+              "en": "Exposing the console to the internet is the aggravating factor: Cisco recommends restricting access to it until on-premises deployments are upgraded."
+            },
+            {
+              "fr": "La répétition des failles sur un même produit en 2026 montre que les équipements de bordure et leurs consoles sont ciblés de façon suivie par des groupes organisés.",
+              "en": "Repeated flaws in the same product during 2026 show that edge equipment and its consoles are being steadily targeted by organised groups."
+            },
+            {
+              "fr": "Corriger ne suffit pas : Cisco demande aussi d'analyser les journaux du service proxy et du serveur vManage pour repérer des connexions ou des comptes inconnus, car l'exploitation a pu précéder le correctif.",
+              "en": "Patching is not enough: Cisco also asks customers to review the service proxy and vManage server logs for unknown connections or accounts, since exploitation may have preceded the fix."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une DSI de collectivité qui relie mairie, écoles et médiathèques par un SD-WAN, quel que soit l'éditeur, la console de gestion doit être traitée comme un équipement critique : pas d'accès direct depuis Internet, accès d'administration filtré et protégé par authentification forte, abonnement aux avis de sécurité de l'éditeur et du CERT-FR. Pour le technicien, cela implique de savoir appliquer rapidement un correctif d'urgence, de vérifier les journaux après coup et de tenir à jour l'inventaire des versions installées.",
+            "en": "For a local-authority IT department linking the town hall, schools and libraries over SD-WAN, whatever the vendor, the management console must be treated as critical equipment: no direct access from the internet, filtered administration access protected by strong authentication, and a subscription to the vendor's and CERT-FR's security advisories. For the technician, this means being able to apply an emergency patch quickly, check logs afterwards and keep an up-to-date inventory of installed versions."
+          },
+          "opinion": {
+            "fr": "Cette faille me rappelle que l'interface d'administration d'un équipement réseau est souvent ce qu'il y a de plus sensible. Pendant mon stage, sur les pare-feu SonicWall, l'accès à la gestion n'était pas ouvert depuis Internet, et je comprends mieux pourquoi. Je vais prendre l'habitude de suivre les avis du CERT-FR et de vérifier, pour chaque équipement que je configure, d'où son interface d'administration est accessible.",
+            "en": "This flaw reminds me that a network device's management interface is often its most sensitive part. During my internship, management access to the SonicWall firewalls was not open from the internet, and I now understand better why. I will make a habit of following CERT-FR advisories and checking, for every device I configure, where its management interface can be reached from."
+          },
+          "sources": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+            "https://www.sdxcentral.com/news/cisco-discloses-yet-another-admin-access-flaw-in-catalyst-sd-wan-manager/",
+            "https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html"
+          ]
+        },
+        {
+          "date": "2026-10-12",
+          "title": {
+            "fr": "Le SD-WAN se fond dans des plateformes SASE complètes",
+            "en": "SD-WAN is merging into full SASE platforms"
+          },
+          "summary": {
+            "fr": "Le SD-WAN s'achète de moins en moins seul : il est désormais intégré à des offres SASE qui y ajoutent des services de sécurité fournis depuis le cloud. Le classement Gartner des plateformes SASE publié en août 2026 place Netskope, Cato Networks, Palo Alto Networks et Zscaler parmi les « Leaders », tandis que Fortinet et Cisco sont « Challengers ». Gartner estime que ce marché dépassera 18 milliards de dollars en 2026.\n\nLa concentration du secteur se poursuit. En juillet 2025, HPE a finalisé le rachat de Juniper Networks pour environ 14 milliards de dollars, réunissant son SD-WAN EdgeConnect et l'IA réseau Mist de Juniper.",
+            "en": "SD-WAN is less and less bought on its own: it is now part of SASE offers that add cloud-delivered security services. Gartner's SASE platforms ranking published in August 2026 names Netskope, Cato Networks, Palo Alto Networks and Zscaler as \"Leaders\", while Fortinet and Cisco are \"Challengers\". Gartner expects the market to exceed $18 billion in 2026.\n\nThe sector keeps consolidating. In July 2025 HPE completed its acquisition of Juniper Networks for about $14 billion, bringing together its EdgeConnect SD-WAN and Juniper's Mist network AI."
+          },
+          "analysis": [
+            {
+              "fr": "Réseau et sécurité se gèrent désormais ensemble : un même éditeur fournit la connexion entre les sites et le contrôle des accès (ZTNA, passerelle web sécurisée, CASB).",
+              "en": "Networking and security are now managed together: the same vendor provides site-to-site connectivity and access control (ZTNA, secure web gateway, CASB)."
+            },
+            {
+              "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022.",
+              "en": "Gartner predicted that 60% of new SD-WAN purchases in 2026 would be part of a single-vendor SASE offer, up from 15% in 2022."
+            },
+            {
+              "fr": "La simplicité d'exploitation devient un critère de choix : Gartner reproche par exemple à Cisco la complexité de gestion de ses fonctions SD-WAN et SSE utilisées ensemble.",
+              "en": "Ease of operation is becoming a selection criterion: Gartner for instance criticises Cisco for the complexity of managing its SD-WAN and SSE functions together."
+            },
+            {
+              "fr": "L'IA générative commence à servir à la configuration initiale des réseaux, ce qui rejoint la tendance AIOps.",
+              "en": "Generative AI is starting to be used for initial network configuration, which ties in with the AIOps trend."
+            }
+          ],
+          "impact": {
+            "fr": "Pour une organisation répartie sur plusieurs sites, comme une mairie avec ses écoles, médiathèques et musée, le SD-WAN permet de fiabiliser les liaisons et de les piloter depuis une seule console. Le passage au SASE pose en revanche la question de la dépendance à un fournisseur cloud et du coût des abonnements.",
+            "en": "For an organisation spread over several sites, such as a town hall with its schools, libraries and museum, SD-WAN makes links more reliable and lets them be managed from a single console. Moving to SASE, however, raises the question of dependence on a cloud provider and of subscription costs."
+          },
+          "opinion": {
+            "fr": "Les pare-feu SonicWall que j'ai configurés pendant mon stage intègrent déjà des fonctions SD-WAN, ce qui montre que cette technologie est accessible même à une collectivité. J'en retiens qu'un technicien réseau doit aujourd'hui comprendre aussi la sécurité dans le cloud, et je souhaite approfondir le fonctionnement du ZTNA.",
+            "en": "The SonicWall firewalls I configured during my internship already include SD-WAN features, which shows that this technology is within reach even for a local authority. My takeaway is that a network technician now also needs to understand cloud security, and I want to learn more about how ZTNA works."
+          },
+          "sources": [
+            "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/",
+            "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/",
+            "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape"
+          ]
+        }
+      ]
+    }
+  },
+  "boite": [
+    {
+      "date": "2026-10-08",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "NIS 2 : conformité visée fin 2028",
+        "en": "NIS 2: compliance targeted for end of 2028"
+      },
+      "source": "Silicon.fr",
+      "url": "https://www.silicon.fr/cybersecurite-1371/les-assises-2026-nis-2-229563",
+      "appris": {
+        "fr": "Le directeur général de l'ANSSI a proposé fin 2028 comme échéance de conformité complète pour toutes les entités, avec des exercices à blanc avant les contrôles.",
+        "en": "The head of ANSSI proposed the end of 2028 as the full-compliance deadline for all entities, with dry runs before inspections."
+      },
+      "interet": {
+        "fr": "C'est une date concrète pour planifier la mise en conformité d'une DSI de collectivité.",
+        "en": "It gives a concrete date to plan the compliance work of a local authority's IT department."
+      },
+      "action": {
+        "fr": "Comparer les pratiques de la DSI avec le ReCyF",
+        "en": "Compare the IT department's practices with ReCyF"
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Transposition de NIS 2 reportée",
+        "en": "NIS 2 transposition postponed"
+      },
+      "source": "Next",
+      "url": "https://next.ink/brief-article/alleluia-la-transposition-de-nis2-est-enfin-a-lordre-du-jour-de-lassemblee-nationale/",
+      "appris": {
+        "fr": "L'examen du projet de loi Résilience, prévu les 7 et 9 octobre à l'Assemblée nationale, a été retiré de l'ordre du jour faute de place.",
+        "en": "The review of the Resilience bill, scheduled for 7 and 9 October at the National Assembly, was dropped from the agenda for lack of time."
+      },
+      "interet": {
+        "fr": "Le cadre légal n'est toujours pas fixé, même si les mesures attendues sont déjà connues.",
+        "en": "The legal framework is still not settled, even though the expected measures are already known."
+      },
+      "action": {
+        "fr": "Suivre la réinscription du texte",
+        "en": "Follow when the bill is rescheduled"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Faille critique Cisco Catalyst SD-WAN Manager",
+        "en": "Critical flaw in Cisco Catalyst SD-WAN Manager"
+      },
+      "source": "Cisco Security Advisory",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-webauth-xr8beuuU",
+      "appris": {
+        "fr": "La CVE-2026-76504 (CVSS 9,8) donne à un attaquant non authentifié un accès administrateur à l'API. Elle est exploitée et seule une mise à jour la corrige.",
+        "en": "CVE-2026-76504 (CVSS 9.8) gives an unauthenticated attacker administrator access to the API. It is exploited and only an update fixes it."
+      },
+      "interet": {
+        "fr": "La console centrale d'un SD-WAN pilote tous les sites : une faille sur elle expose tout le réseau.",
+        "en": "The central SD-WAN console controls every site: a flaw in it exposes the whole network."
+      },
+      "action": {
+        "fr": "Vérifier les équipements concernés et suivre les avis du CERT-FR",
+        "en": "Check affected equipment and follow CERT-FR advisories"
+      }
+    },
+    {
+      "date": "2026-08",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Classement Gartner SASE 2026",
+        "en": "Gartner SASE 2026 ranking"
+      },
+      "source": "SDxCentral",
+      "url": "https://www.sdxcentral.com/news/gartner-sase-2026-rankings-netskope-leads-cato-networks-leaps-and-palo-alto-networks-falls/",
+      "appris": {
+        "fr": "Netskope, Cato Networks, Palo Alto Networks et Zscaler sont « Leaders », Fortinet et Cisco « Challengers », et SonicWall figure parmi les mentions honorables. Le marché dépasserait 18 milliards de dollars en 2026.",
+        "en": "Netskope, Cato Networks, Palo Alto Networks and Zscaler are Leaders, Fortinet and Cisco are Challengers, and SonicWall is an honourable mention. The market would exceed 18 billion dollars in 2026."
+      },
+      "interet": {
+        "fr": "Cela situe SonicWall, que j'utilise en stage, face aux autres éditeurs.",
+        "en": "It shows where SonicWall, which I use during my internship, stands against other vendors."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    },
+    {
+      "date": "2026-03-17",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Référentiel Cyber France (ReCyF)",
+        "en": "French Cyber Framework (ReCyF)"
+      },
+      "source": "Legiscope",
+      "url": "https://www.legiscope.com/blog/transposition-nis2-france.html",
+      "appris": {
+        "fr": "L'ANSSI a publié le ReCyF, un document de travail qui décrit les mesures de sécurité attendues, et propose un préenregistrement en ligne.",
+        "en": "ANSSI published ReCyF, a working document describing the expected security measures, and offers online pre-registration."
+      },
+      "interet": {
+        "fr": "C'est la liste concrète des mesures à mettre en place, utile pour fixer les priorités.",
+        "en": "It is the concrete list of measures to put in place, useful to set priorities."
+      },
+      "action": {
+        "fr": "Lire le ReCyF",
+        "en": "Read ReCyF"
+      }
+    },
+    {
+      "date": "2026",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "Le SD-WAN s'achète en offre SASE",
+        "en": "SD-WAN is now bought as SASE"
+      },
+      "source": "Fierce Network",
+      "url": "https://www.fierce-network.com/cloud/gartner-analysis-forces-reshaping-sd-wan-landscape",
+      "appris": {
+        "fr": "Gartner prévoyait que 60 % des nouveaux achats SD-WAN en 2026 feraient partie d'une offre SASE d'un seul fournisseur, contre 15 % en 2022.",
+        "en": "Gartner expected 60% of new SD-WAN purchases in 2026 to be part of a single-vendor SASE offer, up from 15% in 2022."
+      },
+      "interet": {
+        "fr": "Réseau et sécurité s'achètent de plus en plus ensemble : il faut connaître les deux.",
+        "en": "Networking and security are increasingly bought together: you need to know both."
+      },
+      "action": {
+        "fr": "Approfondir le SASE",
+        "en": "Learn more about SASE"
+      }
+    },
+    {
+      "date": "2025-07-02",
+      "theme": "sdwan",
+      "sujet": {
+        "fr": "HPE rachète Juniper Networks",
+        "en": "HPE acquires Juniper Networks"
+      },
+      "source": "SiliconANGLE",
+      "url": "https://siliconangle.com/2025/07/02/hpe-closes-14b-juniper-acquisition-following-regulatory-approval/",
+      "appris": {
+        "fr": "HPE a finalisé le rachat de Juniper pour environ 14 milliards de dollars, réunissant son SD-WAN EdgeConnect et l'IA réseau Mist.",
+        "en": "HPE completed its acquisition of Juniper for about 14 billion dollars, combining its EdgeConnect SD-WAN with Mist network AI."
+      },
+      "interet": {
+        "fr": "Le marché se concentre autour de quelques grands acteurs, ce qui réduit le choix.",
+        "en": "The market is consolidating around a few large vendors, which narrows the choice."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "theme": "nis2",
+      "sujet": {
+        "fr": "Retard de la transposition française",
+        "en": "France's late transposition"
+      },
+      "source": "Haxoris",
+      "url": "https://haxoris.com/fr/articles/nis2-france-loi-resilience-transposition",
+      "appris": {
+        "fr": "L'Union européenne fixait la transposition au 17 octobre 2024. En France, le projet de loi adopté par le Sénat le 12 mars 2025 n'est toujours pas définitivement voté.",
+        "en": "The EU set the transposition deadline at 17 October 2024. In France, the bill passed by the Senate on 12 March 2025 has still not been finally adopted."
+      },
+      "interet": {
+        "fr": "Ce retard explique pourquoi les dates de mise en conformité restent floues.",
+        "en": "This delay explains why compliance dates remain unclear."
+      },
+      "action": {
+        "fr": "Rien pour le moment",
+        "en": "Nothing for now"
+      }
+    }
+  ]
+}
